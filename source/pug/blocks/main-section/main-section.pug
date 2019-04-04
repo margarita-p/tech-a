@@ -1,0 +1,21 @@
+mixin main-section(data)
+    +el({
+        tag: 'section',
+        class: 'main-section',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .main-section__wrap
+            +el({
+                tag: 'h2',
+                class: 'main-section__heading',
+                text: data.heading,
+            })
+                if data.subheading
+                    +el({
+                        tag: 'span',
+                        class: 'main-section__subheading',
+                        text: data.subheading,
+                    })
+            block

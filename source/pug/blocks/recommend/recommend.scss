@@ -1,0 +1,221 @@
+.recommend {
+  position: relative;
+  height: auto;
+  background-color: #000;
+  background-image: url('../assets/images/bg-recommend.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mask(rgba(#000, 0.7));
+}
+
+.recommend__wrap {
+  position: relative;
+  z-index: 1;
+  @include wrapper;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.recommend__heading {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: color(white);
+}
+
+.recommend__heading,
+.recommend__slogan {
+  text-align: center;
+}
+
+.recommend__slogan {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+}
+
+.recommend__number,
+.recommend__descr {
+  display: inline-block;
+}
+
+.recommend__number {
+  margin-right: 8px;
+  color: color(white);
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.recommend__descr {
+  flex-grow: 1;
+  position: relative;
+  padding-left: 20px;
+  color: color(white);
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 4px;
+    width: 10px;
+    background-color: color(primary);
+  }
+}
+
+.recommend__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: color(white);
+  transform: translate(-50%) scaleY(-1);
+}
+
+@include respond-to(medium) {
+  .recommend__wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .recommend__text-wrap,
+  .recommend__form-card {
+    flex-shrink: 0;
+    width: calc(50% - 10px);
+  }
+
+  .recommend__text-wrap {
+    margin-right: 20px;
+  }
+
+  .recommend__heading,
+  .recommend__slogan {
+    text-align: left;
+  }
+
+  .recommend__heading {
+    font-size: 32px;
+  }
+
+  .recommend__slogan {
+    margin-bottom: 0;
+  }
+
+  .recommend__arrow {
+    left: 250px;
+    transform: scaleY(-1);
+  }
+}
+
+@include respond-to(880px) {
+  .recommend__wrap {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .recommend__slogan {
+    padding-bottom: 50px;
+  }
+
+  .recommend__number {
+    margin-right: 12px;
+    font-size: 100px;
+  }
+
+  .recommend__descr {
+    padding-left: 28px;
+    font-size: 24px;
+    line-height: 28px;
+
+    &::before {
+      top: 4px;
+      bottom: 4px;
+      width: 12px;
+    }
+  }
+
+  .recommend__arrow {
+    left: 320px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@include respond-to(1020px) {
+  .recommend__slogan {
+    padding-bottom: 70px;
+  }
+
+  .recommend__number {
+    margin-right: 16px;
+    font-size: 120px;
+  }
+
+  .recommend__descr {
+    padding-left: 36px;
+    font-size: 28px;
+    line-height: 32px;
+
+    &::before {
+      top: 4px;
+      bottom: 4px;
+      width: 14px;
+    }
+  }
+
+  .recommend__arrow {
+    left: 370px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@include respond-to(large) {
+  .recommend__wrap {
+    padding-top: 90px;
+    padding-bottom: 46px;
+  }
+
+  .recommend__text-wrap {
+    width: 580px;
+  }
+
+  .recommend__heading {
+    font-size: 36px;
+  }
+
+  .recommend__slogan {
+    padding-bottom: 80px;
+  }
+
+  .recommend__number {
+    margin-right: 20px;
+    font-size: 130px;
+  }
+
+  .recommend__descr {
+    padding-left: 40px;
+    font-size: 30px;
+    line-height: 36px;
+
+    &::before {
+      top: 4px;
+      bottom: 4px;
+      width: 16px;
+    }
+  }
+
+  .recommend__arrow {
+    left: 400px;
+    width: 80px;
+    height: 80px;
+  }
+}

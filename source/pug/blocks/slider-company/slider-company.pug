@@ -1,0 +1,18 @@
+mixin slider-company(data)
+    - var companyes = [ 'gazprom.png', 'dor-trans-stroy.png',  'gazprom.png', 'rjd.png', 'bashkiro-avtodor.jpg', 'ugmk.png']
+
+    +el({
+        class: 'slider-company',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in companyes
+            +el({
+                class: 'slider-company__item',
+            })
+                +el({
+                    tag: 'img',
+                    class: 'slider-company__image',
+                    src: 'company/' + item
+                })

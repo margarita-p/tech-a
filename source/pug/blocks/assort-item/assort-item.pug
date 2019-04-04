@@ -1,0 +1,14 @@
+mixin assort-item(data)
+    +el({
+        tag: 'a',
+        class: 'assort-item',
+        mod: data.mod,
+        mix: data.mix,
+        href: data.href,
+        js: data.js,
+    })(style='background-image: url(assets/images/assortiment/assortiment' + data.image + '.jpg);')&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'assort-item__title',
+            text: data.heading,
+        })

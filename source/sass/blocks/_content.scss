@@ -1,0 +1,45 @@
+.content {
+
+}
+
+.content__wrap {
+  @include wrapper;
+}
+
+.content__breadcrumbs {
+  // margin-bottom: 30px;
+}
+
+.content__heading {
+  // margin-bottom: 28px;
+}
+
+.content__section {
+  &--intro {
+    margin-bottom: 40px;
+  }
+}
+
+@include respond-to(medium) {
+  .content {
+  }
+
+  .content__aside {
+    // flex-shrink: 0;
+    // width: 260px;
+    // margin-right: 20px;
+  }
+
+  .content__heading {
+    // margin-bottom: 36px;
+  }
+
+}
+
+@include respond-to(large) {
+  .content__section {
+    &--intro {
+      margin-bottom: -95px;
+    }
+  }
+}

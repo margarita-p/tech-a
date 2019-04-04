@@ -1,0 +1,15 @@
+mixin products-item(data)
+    +el({
+        class: 'products-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+        before: {
+            tag: 'svg',
+            class: 'products-item__icon',
+            icon: data.icon,
+            width: '80',
+            height: '80'
+        }
+    })&attributes(attributes)

@@ -1,0 +1,45 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Остеопрактика'
+    - var main = true
+    - var pageId = 1
+
+block content
+    main.content
+        +intro({
+            mix: 'content__section content__section--intro'
+        })
+        +products({
+
+        })
+        +main-section({
+            heading: 'Официальный дистрибьютер брендов',
+        })
+            +slider-brends({
+
+            })
+        +main-section({
+            heading: 'Большой ассортимент техники',
+            subheading: 'под любую вашу задачу',
+            mod: 'bg-light',
+        })
+            +assort({
+
+            })
+        +main-section({
+            heading: 'Высокое качество нашего сервиса',
+            subheading: 'подтверждается доверием крупнейших компаний страны',
+        })
+            +slider-company({
+
+            })
+        +main-section({
+            heading: 'Наши преимущества',
+        })
+            +features({
+
+            })
+        +recommend({
+
+        })

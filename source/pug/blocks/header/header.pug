@@ -1,0 +1,86 @@
+mixin header(data)
+    -
+        var nav = [
+            {
+                text: 'О компании',
+                href: 'main.html',
+            },
+            {
+                text: 'Техника',
+                href: '',
+            },
+            {
+                text: 'Доп. оборудование',
+                href: '',
+            },
+            {
+                text: 'Лизинг',
+                href: '',
+            },
+            {
+                text: 'Сервис',
+                href: 'service.html',
+            },
+            {
+                text: 'Отзывы',
+                href: 'reviews.html',
+            },
+            {
+                text: 'Вакансии',
+                href: 'vacansy.html',
+            },
+            {
+                text: 'Новости',
+                href: 'news.html',
+            },
+            {
+                text: 'Контакты',
+                href: 'contacts.html',
+            },
+        ];
+
+    +el({
+        tag: 'header',
+        class: 'header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .header__top
+            .header__top-wrap
+                +logo({
+                    mix: 'header__logo',
+                    header: true,
+                })
+                .header__company-block
+                    +company({
+                        mix: 'header__company header__company--info',
+                        text: 'Официальный дилер строительной техники в&nbsp;Респ.&nbsp;Башкортостан, Татарстан, Поволжье, Урале',
+                    })
+                    +company({
+                        mix: 'header__company header__company--address',
+                        text: 'г. Уфа, ул. Сельская Богородская, <br>д. 51, оф. 308',
+                    })
+                    +company({
+                        mix: 'header__company header__company--phone',
+                        href: '79273321792',
+                        phone: '+7 (927) 332 17 92'
+                    })
+                +button-nav({
+                    mix: 'header__btn-nav',
+                })
+        nav.header__main-nav-block(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+            +main-nav({
+                items: nav,
+                mix: 'header__main-nav'
+            })
+            .header__main-nav-company
+                +company({
+                    mix: 'header__company header__company--address',
+                    text: 'г. Уфа, ул. Сельская Богородская, <br>д. 51, оф. 308',
+                })
+                +company({
+                    mix: 'header__company header__company--phone',
+                    href: '79273321792',
+                    phone: '+7 (927) 332 17 92'
+                })

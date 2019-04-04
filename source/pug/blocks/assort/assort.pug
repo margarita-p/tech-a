@@ -1,0 +1,61 @@
+mixin assort(data)
+    -
+        var assortiment = [
+            {
+                heading: 'Экскаваторы',
+                image: '01'
+            },
+            {
+                heading: 'Фронтальные <br>погрузчики',
+                image: '02'
+            },
+            {
+                heading: 'Погрузчики <br>вилочные',
+                image: '03'
+            },
+            {
+                heading: 'Погрузчики <br>телескопические',
+                image: '04'
+            },
+            {
+                heading: 'Погрузчики с <br>бортовым поворотом',
+                image: '01'
+            },
+            {
+                heading: 'Самосвалы <br>Moxy',
+                image: '02'
+            },
+            {
+                heading: 'Перегружатели',
+                image: '03'
+            },
+            {
+                heading: 'Разрушители <br>зданий',
+                image: '04'
+            },
+            {
+                heading: 'Техника для уборки <br>помещений',
+                image: '05'
+            },
+            {
+                heading: 'Прочее',
+                image: '05'
+            },
+        ]
+
+    +el({
+        tag: 'ul',
+        class: 'assort',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in assortiment
+            +el({
+                tag: 'li',
+                class: 'assort__item',
+            })
+                +assort-item({
+                    heading: item.heading,
+                    image: item.image
+                })

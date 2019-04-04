@@ -1,0 +1,58 @@
+.btn {
+  flex-shrink: 0;
+  font-family: font(primary);
+
+  &--bg-primary,
+  &--bg-disabled,
+  &--border {
+    min-height: 50px;
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &--bg-primary,
+  &--bg-disabled {
+    color: color(white);
+  }
+
+  &:disabled,
+  &--bg-disabled {
+    pointer-events: none;
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+
+    @include hover {
+      background-color: darken(color(primary), $change-color);
+    }
+  }
+
+  &--border {
+    border: 1px solid color(primary);
+
+    @include hover {
+      background-color: color(primary);
+      color: color(white);
+    }
+  }
+
+  &--submit {
+    display: block;
+  }
+}
+
+@include respond-to(medium) {
+  .btn {
+    &--bg-primary,
+    &--bg-disabled,
+    &--border {
+      min-height: 60px;
+      padding: 20px 30px;
+    }
+  }
+}

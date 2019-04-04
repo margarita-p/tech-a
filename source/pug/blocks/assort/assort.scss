@@ -1,0 +1,42 @@
+.assort {
+  margin: 0;
+  margin-right: - pads(small);
+  margin-left: - pads(small);
+  padding: 0;
+  list-style-type: none;
+}
+
+.assort__item {
+  margin-bottom: 1px;
+}
+
+
+@include respond-to(medium) {
+  .assort {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  .assort__item {
+    flex-grow: 1;
+    width: 50%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@include respond-to(large) {
+  .assort {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .assort__item {
+    width: 25%;
+    height: 264px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}

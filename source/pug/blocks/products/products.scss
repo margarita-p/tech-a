@@ -1,0 +1,39 @@
+.products {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.products__wrap {
+  @include wrapper;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -1px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.products__item {
+  margin-bottom: 2px;
+  padding: 0 1px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include respond-to(medium) {
+  .products__item {
+
+
+  }
+}
+
+@include respond-to(large) {
+  .products {
+    max-width: none;
+  }
+}

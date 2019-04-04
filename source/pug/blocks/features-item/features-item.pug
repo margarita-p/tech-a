@@ -1,0 +1,21 @@
+mixin features-item(data)
+    +el({
+        class: 'features-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        +el({
+            class: 'features-item__inner',
+        })
+            +el({
+                tag: 'h3',
+                class: 'features-item__title',
+                text: data.heading,
+            })
+            +el({
+                tag: 'p',
+                class: 'features-item__text',
+                text: data.text
+            })
+        //- style: data.image ? 'background-image: url(assets/images/features/features' + data.image + '.jpg);' : ''

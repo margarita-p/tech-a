@@ -1,0 +1,48 @@
+mixin products(data)
+    -
+        var products = [
+            {
+                icon: 'digger',
+                text: 'Сервисное обслуживание (пост)гарантийный ремонт',
+                mod: 'left-shift'
+            },
+            {
+                icon: 'fix',
+                text: 'Дорожно-строительная техника'
+            },
+            {
+                icon: 'clean',
+                text: 'Оборудования для мытья полов'
+            },
+            {
+                icon: 'mechanic',
+                text: 'Запасные части и&nbsp;расходные материалы'
+            },
+            {
+                icon: 'cran',
+                text: 'Складская техника от&nbsp;производителей',
+                mod: 'left-shift'
+            },
+        ]
+
+    +el({
+        class: 'products',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .products__wrap
+            +el({
+                tag: 'ul',
+                class: 'products__list',
+            })
+                each item in products
+                    +el({
+                        tag: 'li',
+                        class: 'products__item',
+                    })
+                        +products-item({
+                            icon: item.icon,
+                            text: item.text,
+                            mod: item.mod
+                        })

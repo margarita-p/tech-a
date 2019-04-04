@@ -1,0 +1,47 @@
+mixin recommend(data)
+    +el({
+        tag: 'section',
+        class: 'recommend',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .recommend__wrap
+            .recommend__text-wrap
+                +el({
+                    class: 'recommend__heading',
+                    text: 'Получите от компании полезные рекомендации <span class="text-primary">по выбору техники</span>'
+                })
+                +el({
+                    class: 'recommend__slogan',
+                })
+                    span.recommend__number 10
+                    span.recommend__descr
+                        | причин
+                        br
+                        span.text-primary
+                            | покупать&nbsp;технику
+                        br
+                        | Doosan
+                    +el({
+                        tag: 'svg',
+                        class: 'recommend__arrow',
+                        icon: 'arrow-lg',
+                    })
+            +form-card({
+                mix: 'recommend__form-card',
+                heading: 'Заполните форму и&nbsp;получите бесплатно статью <span class="small">"10 причин выбирать технику Дусан"</span>'
+            })
+                +form-content({
+                    group: [
+                        {
+                            userName: true,
+                            phone: true
+                        },
+                        {
+                            email: true,
+                        }
+                    ],
+                    personal: true,
+                    submit: 'Получить рекомендации'
+                })

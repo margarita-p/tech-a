@@ -1,0 +1,60 @@
+$src: '../pug';
+
+// fonts
+@import "../assets/fonts/myriad/myriad";
+@import "./libs/normalize";
+@import "./libs/slick";
+// @import "./libs/slick-theme";
+// global
+@import "./global/vars";
+@import "./global/functions";
+@import "./global/mixins/mixins";
+@import "./global/base";
+@import "./global/default/default";
+@import "./global/animation";
+@import "./global/helpers";
+
+
+// blocks
+@import "./blocks/sticky-footer";
+@import "./blocks/content";
+@import "./blocks/article";
+@import "./blocks/category-article";
+@import "./blocks/teaser";
+@import "./blocks/slick-btn";
+
+@import "../pug/blocks/button/button";
+@import "../pug/blocks/button-nav/button-nav";
+@import "../pug/blocks/button-remove/button-remove";
+@import "../pug/blocks/field/field";
+@import "../pug/blocks/checkbox/checkbox";
+@import "../pug/blocks/radio-button/radio-button";
+@import "../pug/blocks/form-card/form-card";
+@import "../pug/blocks/form-content/form-content";
+@import "../pug/blocks/list/list";
+@import "../pug/blocks/title/title";
+@import "../pug/blocks/item/item";
+@import "../pug/blocks/logo/logo";
+@import "../pug/blocks/main-nav/main-nav";
+@import "../pug/blocks/company/company";
+@import "../pug/blocks/header/header";
+@import "../pug/blocks/products/products";
+@import "../pug/blocks/products-item/products-item";
+@import "../pug/blocks/brend-list/brend-list";
+@import "../pug/blocks/brend-item/brend-item";
+@import "../pug/blocks/service-list/service-list";
+@import "../pug/blocks/service-list/service-list";
+@import "../pug/blocks/recommend/recommend";
+@import "../pug/blocks/footer/footer";
+@import "../pug/blocks/overlay/overlay";
+@import "../pug/blocks/intro/intro";
+@import "../pug/blocks/main-section/main-section";
+
+@import "../pug/blocks/assort/assort";
+@import "../pug/blocks/assort-item/assort-item";
+@import "../pug/blocks/item-title/item-title";
+@import "../pug/blocks/features/features";
+@import "../pug/blocks/features-item/features-item";
+@import "../pug/blocks/slider-company/slider-company";
+
+@import "../pug/blocks/slider-brends/slider-brends";

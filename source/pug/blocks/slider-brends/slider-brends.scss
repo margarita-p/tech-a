@@ -1,0 +1,24 @@
+.slider-brends {
+  // margin: 0 -5px;
+  padding: 0 50px;
+}
+
+.slider-brends__item {
+  margin: 7px 5px;
+  text-align: center;
+}
+
+.slider-brends__inner {
+  display: inline-block;
+  width: 136px;
+  height: 60px;
+  padding: 20px;
+  background-color: color(white);
+  box-shadow: 2px 2px 7px 0px rgba(#000, 0.2);
+}
+
+.slider-brends__image {
+  display: block;
+  height: 20px;
+  // @include ofi(contain);
+}

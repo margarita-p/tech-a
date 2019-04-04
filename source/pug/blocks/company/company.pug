@@ -1,0 +1,16 @@
+mixin company(data)
+    +el({
+        class: 'company',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text
+    })&attributes(attributes)
+        if data.phone
+            +el({
+                tag: 'a',
+                href: 'tel:' + data.href,
+                class: 'company__phone',
+                text: data.phone,
+            })
+        block

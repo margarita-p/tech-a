@@ -1,0 +1,155 @@
+.header__top {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background-color: color(#000);
+  color: color(white);
+}
+
+.header__top-wrap {
+  @include wrapper;
+}
+
+.header__logo {
+  margin-bottom: 15px;
+}
+
+.header__company-block {
+  .header__company {
+    &--info {
+      max-width: 340px;
+    }
+
+    &--address {
+      display: none;
+    }
+
+    &--phone {
+      display: none;
+    }
+  }
+}
+
+.header__company-right {
+  display: none;
+}
+
+.header__btn-nav {
+  position: fixed;
+  top: 20px;
+  right: pads(small);
+  z-index: 11;
+}
+
+.header__main-nav-block {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: rgba(#000, 0.8);
+  overflow-y: scroll;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.header__main-nav {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 pads(small);
+  color: color(white);
+}
+
+.header__main-nav-company {
+  margin-top: auto;
+  padding-left: pads(small) + 10px;
+  padding-right: pads(small);
+  padding-top: 20px;
+  color: color(white);
+  border-top: 1px solid rgba(color(white), 0.15);
+
+  .header__company {
+    &--phone {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .header__logo {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+
+  .header__top-wrap {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include respond-to(large) {
+  .header__company-block {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    .header__company {
+      &--info {
+        margin-right: auto;
+      }
+
+      &--address {
+        display: block;
+        margin-right: 30px;
+        text-align: right;
+      }
+
+      &--phone {
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+
+  .header__btn-nav {
+    display: none;
+  }
+
+  .header__main-nav-block {
+    position: static;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: color(white);
+    overflow-y: visible;
+  }
+
+  .header__main-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: breakpoints(large);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-left: pads(large);
+    padding-right: pads(large);
+    color: color(black);
+  }
+
+  .header__main-nav-company {
+    display: none;
+  }
+}
