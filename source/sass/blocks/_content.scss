@@ -21,6 +21,17 @@
   width: 100%;
 }
 
+.content__pagination {
+  &--space-before {
+    margin-top: 20px;
+  }
+
+  &--space-after {
+    margin-bottom: 40px;
+  }
+}
+
+
 @include respond-to(medium) {
   .content {
     padding-top: 40px;
@@ -48,6 +59,16 @@
     width: auto;
     margin: 0 auto;
   }
+
+  .content__pagination {
+    &--space-before {
+      margin-top: 20px;
+    }
+
+    &--space-after {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 @include respond-to(large) {
@@ -61,6 +82,16 @@
 
     &--products {
       margin-top: -95px;
+    }
+  }
+
+  .content__pagination {
+    &--space-before {
+      margin-top: 20px;
+    }
+
+    &--space-after {
+      margin-bottom: 80px;
     }
   }
 }

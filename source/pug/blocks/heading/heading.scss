@@ -20,6 +20,11 @@
 
 .heading__link {
   color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    text-decoration: underline;
+  }
 }
 
 .heading__subheading {

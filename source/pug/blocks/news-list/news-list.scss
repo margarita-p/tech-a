@@ -1,22 +1,26 @@
-.reviews {
+.news-list {
+
+}
+
+.news-list {
   margin: 0;
   padding: 0;
 }
 
-.reviews__item {
+.news-list__item {
   margin-bottom: 20px;
   @include list-no;
 }
 
 @include respond-to(520px) {
-  .reviews {
+  .news-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  .reviews__item {
+  .news-list__item {
     width: 50%;
     margin-bottom: 30px;
     padding-left: 15px;
@@ -25,7 +29,13 @@
 }
 
 @include respond-to(920px) {
-  .reviews__item {
+  .news-list__item {
     width: 33.33%;
+  }
+}
+
+@include respond-to(large) {
+  .news-list__item {
+    width: 25%;
   }
 }
