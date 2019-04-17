@@ -22,7 +22,6 @@ $src: '../pug';
 @import "./blocks/category-article";
 @import "./blocks/teaser";
 @import "./blocks/slick-btn";
-
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/button-remove/button-remove";
@@ -33,7 +32,6 @@ $src: '../pug';
 @import "../pug/blocks/form-card/form-card";
 @import "../pug/blocks/form/form";
 @import "../pug/blocks/list/list";
-@import "../pug/blocks/title/title";
 @import "../pug/blocks/item/item";
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav/main-nav";
@@ -50,18 +48,20 @@ $src: '../pug';
 @import "../pug/blocks/overlay/overlay";
 @import "../pug/blocks/intro/intro";
 @import "../pug/blocks/main-section/main-section";
-
 @import "../pug/blocks/assortiment/assortiment";
 @import "../pug/blocks/assortiment-item/assortiment-item";
 @import "../pug/blocks/item-title/item-title";
 @import "../pug/blocks/features/features";
 @import "../pug/blocks/features-item/features-item";
 @import "../pug/blocks/slider-company/slider-company";
-
 @import "../pug/blocks/slider-brends/slider-brends";
+@import "../pug/blocks/button-control/button-control";
+@import "../pug/blocks/control/control";
+@import "../pug/blocks/reviews/reviews";
+@import "../pug/blocks/reviews-card/reviews-card";
+@import "../pug/blocks/heading/heading";
 
 @import "./blocks/content";
 @import "./blocks/article";
 
-@import "../pug/blocks/button-control/button-control";
-@import "../pug/blocks/control/control";
+@import "../pug/blocks/pagination/pagination";

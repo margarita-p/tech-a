@@ -1,0 +1,21 @@
+mixin heading(data)
+    +el({
+        tag: data.tag,
+        class: 'heading',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.link ? '' : data.heading
+    })&attributes(attributes)
+        if data.link
+            +el({
+                tag: 'a',
+                class: 'heading__link',
+                text: data.heading,
+            })
+        if data.subheading
+            +el({
+                tag: 'span',
+                class: 'heading__subheading',
+                text: data.subheading,
+            })

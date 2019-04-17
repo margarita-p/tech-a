@@ -12,7 +12,7 @@
     "lint:styles": "./node_modules/.bin/stylelint source/**/*.scss",
     "lint": "npm run lint:styles && npm run lint:scripts",
     "prod": "gulp clean && gulp build && gulp copy && gulp sassCopy && gulp sassCopyBlock",
-    "commit": "git add . && git commit -m 'm' && git push origin master && npm run deploy"
+    "commit": "git add . && git commit -m 'lipsum' && git push origin master && npm run deploy"
   },
   "keywords": [
     "development",

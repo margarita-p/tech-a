@@ -41,11 +41,13 @@
 }
 
 .footer__list {
-  @include list-none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__item {
   margin-bottom: 0;
+  @include list-no;
 
   a {
     text-decoration: none;

@@ -1,5 +1,3 @@
-@mixin list-none {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+@mixin list-no {
+  list-style: none;
 }
