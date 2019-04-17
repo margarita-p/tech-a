@@ -38,12 +38,18 @@ $durations: (
 );
 
 // для бордер-радиусов
-$rad: (
+$radius: (
   sm: 5px,
 );
 
 $func: (
   primary: cubic-bezier(0.25, 0.1, 0.25, 1),
+);
+
+$mb: (
+  sm: 20px,
+  md: 22px,
+  lg: 24px,
 );
 
 $change-color: 5%;

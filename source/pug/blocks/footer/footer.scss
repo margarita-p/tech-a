@@ -5,6 +5,8 @@
   background-color: color(white);
   color: color(gray);
   text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
 
   p {
     color: inherit;
@@ -136,7 +138,7 @@
 
   .footer__made {
     justify-content: flex-start;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 
@@ -175,10 +177,6 @@
   .footer__address {
     margin-bottom: 26px;
     padding-right: 0;
-  }
-
-  .footer__made {
-    margin-top: 30px;
   }
 }
 

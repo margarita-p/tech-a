@@ -1,17 +1,16 @@
 p {
   margin: 0;
-  margin-bottom: 20px;
-  font-family: font(primary);
-  font-size: 14px;
-  line-height: 1.4;
-  font-style: normal;
-  font-weight: 400;
+  margin-bottom: mb(sm);
 }
 
 @include respond-to(medium) {
-
+  p {
+    margin-bottom: mb(md);
+  }
 }
 
 @include respond-to(large) {
-
+  p {
+    margin-bottom: mb(lg);
+  }
 }

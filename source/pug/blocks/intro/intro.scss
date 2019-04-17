@@ -35,6 +35,10 @@
   font-size: 36px;
   font-weight: 700;
   text-transform: none;
+
+  &::before {
+    display: none;
+  }
 }
 
 .intro__subheading {

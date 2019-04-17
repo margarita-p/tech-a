@@ -1,49 +1,21 @@
 mixin slider-brends(data)
-    -
-        var brends = [
-            {
-                image: 'umg.jpg',
-                mod: '',
-            }, {
-                image: 'sunward.png',
-                mod: 'shift-top',
-            },{
-                image: 'xcmg.png',
-                mod: 'shift-top',
-            },{
-                image: 'dieci.png',
-                mod: '',
-            },{
-                image: 'liugong.jpg',
-                mod: '',
-            },{
-                image: 'disd.jpg',
-                mod: '',
-            },{
-                image: 'doosan.jpg',
-                mod: 'lg',
-            },{
-                image: 'felix.png',
-                mod: '',
-            }
-        ]
-
     +el({
         class: 'slider-brends',
         mod: data.mod,
         mix: data.mix,
         js: data.js,
     })&attributes(attributes)
-        each item in brends
-            +el({
-                class: 'slider-brends__item',
-            })
+        +el({
+            class: 'slider-brends__list',
+            mod: data.mod,
+            mix: data.mix,
+            js: 'slider-brends',
+        })&attributes(attributes)
+            each item in brends
                 +el({
-                    class: 'slider-brends__slide',
-                    mod: item.mod,
+                    class: 'slider-brends__item',
                 })
-                    +el({
-                        tag: 'img',
-                        class: 'slider-brends__logo',
-                        src: 'brends/' + item.image
+                    +brend-item({
+                        image: item.image,
+                        mod: item.mod,
                     })

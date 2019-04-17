@@ -62,3 +62,6 @@ $src: '../pug';
 
 @import "./blocks/content";
 @import "./blocks/article";
+
+@import "../pug/blocks/button-control/button-control";
+@import "../pug/blocks/control/control";

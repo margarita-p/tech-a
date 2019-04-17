@@ -1,5 +1,6 @@
 .content {
-
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
 .content__wrap {
@@ -13,11 +14,22 @@
 }
 
 .content__section {
+  margin-bottom: 30px;
+}
 
+.content__button-bottom {
+  width: 100%;
 }
 
 @include respond-to(medium) {
+  .content {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
   .content__section {
+    margin-bottom: 50px;
+
     &--products {
       position: relative;
       z-index: 1;
@@ -32,10 +44,21 @@
   .content__heading {
   }
 
+  .content__button-bottom {
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 @include respond-to(large) {
+  .content {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
   .content__section {
+    margin-bottom: 70px;
+
     &--products {
       margin-top: -95px;
     }

@@ -1,0 +1,25 @@
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  transform: translateY(-50%);
+
+  @include hover {
+    background-color: color(light);
+  }
+
+  &--prev {
+    .control__icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.control__icon {
+  display: block;
+  width: 100%;
+  fill: #868686;
+}

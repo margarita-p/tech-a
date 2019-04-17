@@ -1,12 +1,12 @@
-.btn {
+.button {
+  display: block;
   flex-shrink: 0;
-  font-family: font(primary);
 
   &--bg-primary,
   &--bg-disabled,
-  &--border {
+  &--border-primary {
     min-height: 50px;
-    padding: 15px 20px;
+    padding: 14px 25px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -32,8 +32,9 @@
     }
   }
 
-  &--border {
-    border: 1px solid color(primary);
+  &--border-primary {
+    border: 2px solid color(primary);
+    color: color(primary);
 
     @include hover {
       background-color: color(primary);
@@ -47,12 +48,25 @@
 }
 
 @include respond-to(medium) {
-  .btn {
+  .button {
     &--bg-primary,
     &--bg-disabled,
-    &--border {
-      min-height: 60px;
-      padding: 20px 30px;
+    &--border-primary {
+      padding: 16px 30px;
+      font-size: 17px;
+      line-height: 21px;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .button {
+    &--bg-primary,
+    &--bg-disabled,
+    &--border-primary {
+      padding: 18px 35px;
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }

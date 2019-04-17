@@ -1,2 +1,13 @@
 mixin brend-item(data)
-  .brend-item&attributes(attributes)
+    +el({
+        class: 'brend-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text
+    })&attributes(attributes)
+        +el({
+            tag: 'img',
+            class: 'brend-item__logo',
+            src: 'brends/' + data.image
+        })

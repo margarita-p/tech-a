@@ -63,10 +63,18 @@
   @return null;
 }
 
-@function rad($key) {
-  @if map-has-key($rad, $key) {
-    @return map-get($rad, $key);
+@function radius($key) {
+  @if map-has-key($radius, $key) {
+    @return map-get($radius, $key);
   }
-  @warn "Unknown `#{$key}` in $rad.";
+  @warn "Unknown `#{$key}` in $radius.";
+  @return null;
+}
+
+@function mb($key) {
+  @if map-has-key($mb, $key) {
+    @return map-get($mb, $key);
+  }
+  @warn "Unknown `#{$key}` in $mb.";
   @return null;
 }

@@ -11,7 +11,7 @@ body {
   background-color: color(white);
   font-family: font(primary);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 2.2;
   font-style: normal;
   font-weight: 400;
   color: color(black);
@@ -34,13 +34,12 @@ html {
 
 @include respond-to(medium) {
   body {
-    font-size: 15px;
+    // font-size: 15px;
   }
 }
 
 @include respond-to(large) {
   body {
-    font-size: 16px;
-    line-height: 1.5;
+    // font-size: 16px;
   }
 }
