@@ -1,7 +1,7 @@
-mixin assort-item(data)
+mixin assortiment-item(data)
     +el({
         tag: 'a',
-        class: 'assort-item',
+        class: 'assortiment-item',
         mod: data.mod,
         mix: data.mix,
         href: data.href,
@@ -9,6 +9,6 @@ mixin assort-item(data)
     })(style='background-image: url(assets/images/assortiment/assortiment' + data.image + '.jpg);')&attributes(attributes)
         +el({
             tag: 'h3',
-            class: 'assort-item__title',
+            class: 'assortiment-item__title',
             text: data.heading,
         })

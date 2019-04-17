@@ -1,0 +1,59 @@
+.checkbox-confirm {
+  display: inline-block;
+
+}
+
+.checkbox-confirm__input {
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.checkbox-confirm__label {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+  color: color(gray);
+  font-size: 12px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transition: duration(md) func(primary);
+  }
+
+  &::before {
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid color(light-gray);
+  }
+
+  &::after {
+    opacity: 0;
+    top: 5px;
+    left: 3px;
+    width: 7px;
+    height: 4px;
+    border-left: 1px solid color(gray);
+    border-bottom: 1px solid color(gray);
+    transform: rotate(-45deg);
+  }
+
+  @include hover {
+    &::before {
+      background-color: color(light);
+    }
+  }
+}
+
+.checkbox-confirm__input:checked ~ .checkbox-confirm__label {
+  &::after {
+    opacity: 1;
+    background-color: color(light);
+  }
+}

@@ -1,13 +1,77 @@
 mixin form(data)
-    +el({
-        tag: 'form',
-        class: data.class,
-        mix: data.mix,
-        mod: data.mod,
-        js: data.js,
-    })(
-        action=data.action ? data.action : '/',
-        method=data.method ? data.method : 'post',
-        accept-charset='UTF-8'
-    )&attributes(attributes)
-        block
+    +f({
+        class: 'form',
+    })
+        .form__inner
+            each item in data.group
+                +el({
+                    class: 'form__group',
+                    mod: item.modGroup
+                })
+                    if item.firstName
+                        +field({
+                            mix: 'form__field',
+                            icon: item.icon ? 'user-circle' : '',
+                            mod:  item.modField,
+                            label: 'Введите имя',
+                            name: 'user',
+                            placeholder: 'Введите имя:'
+                        })
+                    if item.lastName
+                        +field({
+                            mix: 'form__field',
+                            icon: item.icon ? 'user-circle' : '',
+                            mod:  item.modField,
+                            label: 'Фамилия',
+                            name: 'user',
+                            placeholder: 'Введите фамилию'
+                        })
+                    if item.email
+                        +field({
+                            mix: 'form__field',
+                            icon: item.icon ? 'email-circle' : '',
+                            mod: item.modField,
+                            label: 'Введите e-mail:',
+                            type: 'email',
+                            name: 'email',
+                            placeholder: 'Введите e-mail:'
+                        })
+                    if item.tel
+                        +field({
+                            mix: 'form__field',
+                            icon: item.icon ? 'tel-circle' : '',
+                            mod: item.modField,
+                            label: 'Введите телефон',
+                            type: 'tel',
+                            name: 'tel',
+                            placeholder: 'Введите телефон:'
+                        })
+                    if item.message
+                        +field({
+                            tag: 'textarea',
+                            mix: 'form__field',
+                            icon: item.icon ? 'message-circle' : '',
+                            mod: item.modField,
+                            label: 'Вопрос',
+                            type: 'email',
+                            name: 'message',
+                            placeholder: data.message
+                        })
+            if data.confirm
+                .form__confirm
+                    +checkbox-confirm({
+                        mod: 'small',
+                        label: 'Согласие на обработку персональных данных',
+                        required: true,
+                        checked: true,
+                    })
+            +el({
+                class: 'form__submit-wrap',
+                mod: data.modSubmit
+            })
+                +button({
+                    mix: 'form__submit',
+                    mod: 'bg-primary',
+                    type: 'submit',
+                    text: data.submit
+                })

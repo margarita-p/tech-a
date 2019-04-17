@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 162px);
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #000;
   background-image: url('../assets/images/bg-intro.jpg');
   background-repeat: no-repeat;
@@ -20,8 +22,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .intro__heading-wrap {
@@ -61,6 +61,8 @@
 @include respond-to(medium) {
   .intro {
     min-height: 530px;
+    padding-top: 60px;
+    padding-bottom: 180px;
   }
 
   .intro__heading-wrap {
@@ -76,7 +78,7 @@
 @include respond-to(large) {
   .intro {
     min-height: 630px;
-    padding-bottom: 130px;
+    padding-bottom: 196px;
   }
 
   .intro__heading-wrap {

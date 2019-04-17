@@ -1,6 +1,8 @@
 .recommend {
   position: relative;
   height: auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
   background-color: #000;
   background-image: url('../assets/images/bg-recommend.jpg');
   background-repeat: no-repeat;
@@ -13,13 +15,12 @@
   position: relative;
   z-index: 1;
   @include wrapper;
-  padding-top: 40px;
-  padding-bottom: 30px;
 }
 
 .recommend__heading {
   margin-bottom: 20px;
   font-size: 28px;
+  line-height: 1.2;
   font-weight: 700;
   color: color(white);
 }
@@ -31,7 +32,7 @@
 
 .recommend__slogan {
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   margin-bottom: 10px;
 }
 
@@ -74,13 +75,18 @@
   left: 50%;
   bottom: 0;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   fill: color(white);
-  transform: translate(-50%) scaleY(-1);
+  transform: translate(-50%);
 }
 
 @include respond-to(medium) {
+  .recommend {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
   .recommend__wrap {
     display: flex;
     align-items: flex-start;
@@ -94,6 +100,7 @@
 
   .recommend__text-wrap {
     margin-right: 20px;
+    transform: translateY(-4px);
   }
 
   .recommend__heading,
@@ -110,77 +117,48 @@
   }
 
   .recommend__arrow {
-    left: 250px;
-    transform: scaleY(-1);
+    left: 240px;
+    transform: none;
   }
 }
 
-@include respond-to(880px) {
-  .recommend__wrap {
-    padding-top: 60px;
-    padding-bottom: 40px;
+@include respond-to(medium-lg) {
+  .recommend {
+    padding-top: 80px;
+    padding-bottom: 36px;
   }
 
-  .recommend__slogan {
-    padding-bottom: 50px;
-  }
-
-  .recommend__number {
-    margin-right: 12px;
-    font-size: 100px;
-  }
-
-  .recommend__descr {
-    padding-left: 28px;
-    font-size: 24px;
-    line-height: 28px;
-
-    &::before {
-      top: 4px;
-      bottom: 4px;
-      width: 12px;
-    }
-  }
-
-  .recommend__arrow {
-    left: 320px;
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@include respond-to(1020px) {
   .recommend__slogan {
     padding-bottom: 70px;
   }
 
   .recommend__number {
     margin-right: 16px;
-    font-size: 120px;
+    font-size: 110px;
   }
 
   .recommend__descr {
-    padding-left: 36px;
+    padding-left: 32px;
     font-size: 28px;
     line-height: 32px;
 
     &::before {
-      top: 4px;
-      bottom: 4px;
+      top: 6px;
+      bottom: 6px;
       width: 14px;
     }
   }
 
   .recommend__arrow {
-    left: 370px;
+    left: 350px;
     width: 70px;
     height: 70px;
   }
 }
 
 @include respond-to(large) {
-  .recommend__wrap {
-    padding-top: 90px;
+  .recommend {
+    padding-top: 100px;
     padding-bottom: 46px;
   }
 
@@ -214,8 +192,8 @@
   }
 
   .recommend__arrow {
-    left: 400px;
-    width: 80px;
-    height: 80px;
+    left: 410px;
+    width: 85px;
+    height: 85px;
   }
 }

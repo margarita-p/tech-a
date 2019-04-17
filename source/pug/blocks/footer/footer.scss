@@ -43,7 +43,7 @@
 }
 
 .footer__item {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 
   a {
     text-decoration: none;
@@ -180,72 +180,8 @@
   .footer__made {
     margin-top: 30px;
   }
-
-
-
-
-
-
-  // .footer__contacts {
-  //   margin-right: auto;
-  // }
-  //
-  // .footer__middle {
-  //   display: flex;
-  //   padding-top: 30px;
-  // }
-  //
-  // .footer__contacts {
-  //   width: calc(50% - 20px);
-  //   max-width: 360px;
-  //   margin-right: 20px;
-  //   margin-bottom: 0;
-  // }
-  //
-  // .footer__nav {
-  //   flex-grow: 1;
-  // }
-  //
-  // .footer__bottom {
-  //   .footer__wrap {
-  //     display: flex;
-  //     align-items: flex-start;
-  //   }
-  // }
-  //
-  // .footer__copyright,
-  // .footer__info {
-  //   text-align: left;
-  // }
-  //
-  // .footer__made {
-  //   text-align: right;
-  // }
-  //
-  // .footer__copyright,
-  // .footer__made {
-  //   flex-shrink: 0;
-  //   width: 200px;
-  // }
-  //
-  // .footer__copyright,
-  // .footer__info {
-  //   margin-right: 20px;
-  // }
-  //
-  // .footer__nav-item {
-  //   margin-bottom: 15px;
-  // }
 }
 
 @include respond-to(large) {
-  // .footer__top {
-  //   margin-bottom: 15px;
-  // }
-  //
-  // .footer__copyright,
-  // .footer__made,
-  // .footer__company {
-  //   width: 270px;
-  // }
+
 }

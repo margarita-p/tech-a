@@ -1,4 +1,4 @@
-mixin assort(data)
+mixin assortiment(data)
     -
         var assortiment = [
             {
@@ -6,23 +6,23 @@ mixin assort(data)
                 image: '01'
             },
             {
-                heading: 'Фронтальные <br>погрузчики',
+                heading: 'Фронтальные погрузчики',
                 image: '02'
             },
             {
-                heading: 'Погрузчики <br>вилочные',
+                heading: 'Погрузчики вилочные',
                 image: '03'
             },
             {
-                heading: 'Погрузчики <br>телескопические',
+                heading: 'Погрузчики телескопические',
                 image: '04'
             },
             {
-                heading: 'Погрузчики с <br>бортовым поворотом',
+                heading: 'Погрузчики с бортовым поворотом',
                 image: '01'
             },
             {
-                heading: 'Самосвалы <br>Moxy',
+                heading: 'Самосвалы Moxy',
                 image: '02'
             },
             {
@@ -30,11 +30,11 @@ mixin assort(data)
                 image: '03'
             },
             {
-                heading: 'Разрушители <br>зданий',
+                heading: 'Разрушители зданий',
                 image: '04'
             },
             {
-                heading: 'Техника для уборки <br>помещений',
+                heading: 'Техника для уборки помещений',
                 image: '05'
             },
             {
@@ -45,7 +45,7 @@ mixin assort(data)
 
     +el({
         tag: 'ul',
-        class: 'assort',
+        class: 'assortiment',
         mod: data.mod,
         mix: data.mix,
         js: data.js,
@@ -53,9 +53,9 @@ mixin assort(data)
         each item in assortiment
             +el({
                 tag: 'li',
-                class: 'assort__item',
+                class: 'assortiment__item',
             })
-                +assort-item({
+                +assortiment-item({
                     heading: item.heading,
                     image: item.image
                 })

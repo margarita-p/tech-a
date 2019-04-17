@@ -9,6 +9,5 @@ module.exports = () => (
     dot: true,
     since: gulp.lastRun('favicon')
   })
-    .pipe($.newer(config.dest.favicon))
     .pipe(gulp.dest(config.dest.favicon))
 );

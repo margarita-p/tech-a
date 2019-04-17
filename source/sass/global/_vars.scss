@@ -5,6 +5,7 @@ $fonts: (
 $breakpoints: (
   small: 320px,
   medium: 768px,
+  medium-lg: 920px,
   large: 1220px,
 );
 
@@ -45,4 +46,4 @@ $func: (
   primary: cubic-bezier(0.25, 0.1, 0.25, 1),
 );
 
-$change-color: 10%;
+$change-color: 5%;

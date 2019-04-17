@@ -8,17 +8,36 @@
   text-align: center;
 }
 
-.slider-brends__inner {
-  display: inline-block;
+.slider-brends__slide {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 136px;
   height: 60px;
   padding: 20px;
   background-color: color(white);
   box-shadow: 2px 2px 7px 0px rgba(#000, 0.2);
+
+  &--shift-top {
+    .slider-brends__logo {
+      transform: translateY(-3px);
+    }
+  }
+
+  &--lg {
+    padding: 15px;
+  }
 }
 
-.slider-brends__image {
+.slider-brends__logo {
   display: block;
-  height: 20px;
-  // @include ofi(contain);
+  max-height: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+@include respond-to(580px) {
+  .slider-brends__slide {
+    display: flex;
+  }
 }

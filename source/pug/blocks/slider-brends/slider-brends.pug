@@ -1,5 +1,32 @@
 mixin slider-brends(data)
-    - var brends = ['liugong.jpg', 'liugong.jpg','liugong.jpg','liugong.jpg','liugong.jpg','liugong.jpg','liugong.jpg','liugong.jpg',]
+    -
+        var brends = [
+            {
+                image: 'umg.jpg',
+                mod: '',
+            }, {
+                image: 'sunward.png',
+                mod: 'shift-top',
+            },{
+                image: 'xcmg.png',
+                mod: 'shift-top',
+            },{
+                image: 'dieci.png',
+                mod: '',
+            },{
+                image: 'liugong.jpg',
+                mod: '',
+            },{
+                image: 'disd.jpg',
+                mod: '',
+            },{
+                image: 'doosan.jpg',
+                mod: 'lg',
+            },{
+                image: 'felix.png',
+                mod: '',
+            }
+        ]
 
     +el({
         class: 'slider-brends',
@@ -12,10 +39,11 @@ mixin slider-brends(data)
                 class: 'slider-brends__item',
             })
                 +el({
-                    class: 'slider-brends__inner',
+                    class: 'slider-brends__slide',
+                    mod: item.mod,
                 })
                     +el({
                         tag: 'img',
-                        class: 'slider-brends__image',
-                        src: 'brends/' + item
+                        class: 'slider-brends__logo',
+                        src: 'brends/' + item.image
                     })

@@ -10,7 +10,7 @@ mixin recommend(data)
             .recommend__text-wrap
                 +el({
                     class: 'recommend__heading',
-                    text: 'Получите от компании полезные рекомендации <span class="text-primary">по выбору техники</span>'
+                    text: 'Получите от компании полезные рекомендации <span class="text-primary">по&nbsp;выбору техники</span>'
                 })
                 +el({
                     class: 'recommend__slogan',
@@ -32,16 +32,16 @@ mixin recommend(data)
                 mix: 'recommend__form-card',
                 heading: 'Заполните форму и&nbsp;получите бесплатно статью <span class="small">"10 причин выбирать технику Дусан"</span>'
             })
-                +form-content({
+                +form({
                     group: [
                         {
-                            userName: true,
-                            phone: true
+                            firstName: true,
+                            tel: true
                         },
                         {
                             email: true,
                         }
                     ],
-                    personal: true,
+                    confirm: true,
                     submit: 'Получить рекомендации'
                 })

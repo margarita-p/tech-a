@@ -39,8 +39,7 @@ mixin form-content(data)
                         })(aria-required='true', aria-invalid='false')
         if data.personal
             .form-content__personal
-                +checkbox({
-                    mod: 'small',
+                +checkbox-confirm({
                     label: 'Согласие на обработку персональных данных',
                 })(aria-required='true', aria-invalid='false')
         .form-content__submit

@@ -1,17 +1,16 @@
 extends ./templates/template
 
 block vars
-    - var pageTitle = 'Остеопрактика'
+    - var pageTitle = 'Техальянс'
     - var main = true
     - var pageId = 1
 
 block content
     main.content
         +intro({
-            mix: 'content__section content__section--intro'
         })
         +products({
-
+            mix: 'content__section content__section--products'
         })
         +main-section({
             heading: 'Официальный дистрибьютер брендов',
@@ -22,20 +21,22 @@ block content
         +main-section({
             heading: 'Большой ассортимент техники',
             subheading: 'под любую вашу задачу',
-            mod: 'bg-light',
+            mod: ['bg-light', 'assortiment'],
         })
-            +assort({
+            +assortiment({
 
             })
         +main-section({
             heading: 'Высокое качество нашего сервиса',
             subheading: 'подтверждается доверием крупнейших компаний страны',
+            mod: 'slider-company',
         })
             +slider-company({
 
             })
         +main-section({
             heading: 'Наши преимущества',
+            mod: ['features'],
         })
             +features({
 

@@ -24,12 +24,16 @@
           breakpoint: 768,
           settings: {
             slidesToShow: 3,
+            centerMode: false,
+            variableWidth: false,
           }
         },
         {
           breakpoint: 580,
           settings: {
             slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true,
           }
         },
 
