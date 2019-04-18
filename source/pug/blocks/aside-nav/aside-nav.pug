@@ -1,0 +1,29 @@
+mixin aside-nav(data)
+    +el({
+        class: 'aside-nav',
+        mix: data.mix,
+        js: data.js,
+        mod: data.mod,
+    })&attributes(attributes)
+        +button({
+            mix: 'aside-nav__button',
+            text: 'Категории',
+            js: 'aside-nav-button',
+        })
+        +el({
+            tag: 'ul',
+            class: 'aside-nav__list',
+        })
+            each item in data.items
+                +el({
+                    tag: 'li',
+                    class: 'aside-nav__item',
+                    mod: item.mod,
+                    mix: item.mix,
+                })
+                    +el({
+                        tag: 'a',
+                        class: 'aside-nav__link',
+                        text: item.text,
+                        href: item.href
+                    })

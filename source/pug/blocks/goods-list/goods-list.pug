@@ -1,6 +1,6 @@
-mixin products(data)
+mixin goods-list(data)
     -
-        var products = [
+        var goods = [
             {
                 icon: 'screw',
                 text: 'Сервисное обслуживание (пост)гарантийный ремонт',
@@ -24,22 +24,22 @@ mixin products(data)
         ]
 
     +el({
-        class: 'products',
+        class: 'goods',
         mod: data.mod,
         mix: data.mix,
         js: data.js,
     })&attributes(attributes)
-        .products__wrap
+        .goods-list__wrap
             +el({
                 tag: 'ul',
-                class: 'products__list',
+                class: 'goods-list__list',
             })
-                each item in products
+                each item in goods
                     +el({
                         tag: 'li',
-                        class: 'products__item',
+                        class: 'goods-list__item',
                     })
-                        +products-item({
+                        +goods-item({
                             icon: item.icon,
                             text: item.text,
                             mod: item.mod

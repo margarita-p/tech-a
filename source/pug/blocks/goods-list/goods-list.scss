@@ -1,9 +1,9 @@
-.products__list {
+.goods-list__list {
   margin: 0;
   padding: 0;
 }
 
-.products__item {
+.goods-list__item {
   margin-bottom: 2px;
   list-style: none;
 
@@ -13,19 +13,19 @@
 }
 
 @include respond-to(medium) {
-  .products__wrap {
+  .goods-list__wrap {
     padding-left: pads(medium);
     padding-right: pads(medium);
   }
 
-  .products__list {
+  .goods-list__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -1px;
   }
 
-  .products__item {
+  .goods-list__item {
     width: 20%;
     max-width: 197px;
     padding: 0 1px;
@@ -33,7 +33,7 @@
 }
 
 @include respond-to(large) {
-  .products__wrap {
+  .goods-list__wrap {
     width: breakpoints(large);
     margin-left: auto;
     margin-right: auto;
@@ -41,7 +41,7 @@
     padding-right: pads(large);
   }
 
-  .products__item {
+  .goods-list__item {
     width: auto;
   }
 }

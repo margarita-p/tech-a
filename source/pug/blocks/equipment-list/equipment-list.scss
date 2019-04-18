@@ -1,22 +1,22 @@
-.reviews {
+.equipment-list {
   margin: 0;
   padding: 0;
 }
 
-.reviews__item {
+.equipment-list__item {
   margin-bottom: 20px;
   @include list-no;
 }
 
 @include respond-to(small-lg) {
-  .reviews {
+  .equipment-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  .reviews__item {
+  .equipment-list__item {
     width: 50%;
     margin-bottom: 30px;
     padding-left: 15px;
@@ -25,7 +25,13 @@
 }
 
 @include respond-to(medium-lg) {
-  .reviews__item {
+  .equipment-list__item {
+    width: 50%;
+  }
+}
+
+@include respond-to(1120px) {
+  .equipment-list__item {
     width: 33.33%;
   }
 }

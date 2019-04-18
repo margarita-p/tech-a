@@ -2,16 +2,25 @@
   display: block;
   flex-shrink: 0;
 
-  &--bg-primary,
-  &--bg-disabled,
-  &--border-primary {
-    min-height: 50px;
-    padding: 14px 25px;
+  &--large,
+  &--small {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &--large {
+    padding: 14px 40px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    text-align: center;
-    text-decoration: none;
+  }
+
+  &--small {
+    padding: 12px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 16px;
   }
 
   &--bg-primary,
@@ -42,6 +51,12 @@
     }
   }
 
+  &--large {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+  }
+
   &--submit {
     display: block;
   }
@@ -49,9 +64,7 @@
 
 @include respond-to(medium) {
   .button {
-    &--bg-primary,
-    &--bg-disabled,
-    &--border-primary {
+    &--large {
       padding: 16px 30px;
       font-size: 17px;
       line-height: 21px;
@@ -61,9 +74,7 @@
 
 @include respond-to(large) {
   .button {
-    &--bg-primary,
-    &--bg-disabled,
-    &--border-primary {
+    &--large {
       padding: 18px 35px;
       font-size: 18px;
       line-height: 22px;

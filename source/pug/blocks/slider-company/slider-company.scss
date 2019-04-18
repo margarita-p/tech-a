@@ -1,5 +1,20 @@
 .slider-company {
+  position: relative;
   padding: 0 50px;
+
+  .control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: -50px;
+    }
+
+    &--next {
+      right: -50px;
+    }
+  }
 }
 
 .slider-company__item {
@@ -36,5 +51,4 @@
   .slider-company__item {
     height: 55px;
   }
-
 }

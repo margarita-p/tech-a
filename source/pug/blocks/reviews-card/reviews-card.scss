@@ -50,7 +50,7 @@
   line-height: 26px;
 }
 
-@include respond-to(520px) {
+@include respond-to(small-lg) {
   .reviews-card__image-wrap {
     height: 16vw;
   }
@@ -61,7 +61,7 @@
   }
 }
 
-@include respond-to(920px) {
+@include respond-to(medium-lg) {
   .reviews-card__image-wrap {
     height: 10vw;
   }

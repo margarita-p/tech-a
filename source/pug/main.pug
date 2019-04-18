@@ -30,8 +30,7 @@ block vars
             },{
                 image: 'felix.png',
                 mod: '',
-            },
-            {
+            }, {
                 image: 'umg.jpg',
                 mod: '',
             }, {
@@ -60,40 +59,29 @@ block vars
 
 block content
     main
-        +intro({
-        })
-        +products({
-            mix: 'content__section content__section--products'
+        +intro({})
+        +goods-list({
+            mix: 'content__section content__section--goods-list'
         })
         +main-section({
             heading: 'Официальный дистрибьютер брендов',
         })
-            +slider-brends({
-
-            })
+            +slider-brends({})
         +main-section({
             heading: 'Большой ассортимент техники',
             subheading: 'под любую вашу задачу',
             mod: ['bg-light', 'assortiment'],
         })
-            +assortiment({
-
-            })
+            +assortiment({})
         +main-section({
             heading: 'Высокое качество нашего сервиса',
             subheading: 'подтверждается доверием крупнейших компаний страны',
             mod: 'slider-company',
         })
-            +slider-company({
-
-            })
+            +slider-company({})
         +main-section({
             heading: 'Наши преимущества',
             mod: ['features'],
         })
-            +features({
-
-            })
-        +recommend({
-
-        })
+            +features({})
+        +recommend({})

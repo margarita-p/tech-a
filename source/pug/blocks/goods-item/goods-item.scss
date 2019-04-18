@@ -1,4 +1,4 @@
-.products-item {
+.goods-item {
   display: flex;
   align-items: center;
   width: 100%;
@@ -12,13 +12,13 @@
     background-color: color(primary);
     color: color(white);
 
-    .products-item__icon {
+    .goods-item__icon {
       fill: color(white);
     }
   }
 }
 
-.products-item__icon {
+.goods-item__icon {
   flex-shrink: 0;
   display: block;
   width: 40px;
@@ -28,7 +28,7 @@
 }
 
 @include respond-to(medium) {
-  .products-item {
+  .goods-item {
     position: relative;
     display: block;
     height: 100%;
@@ -53,7 +53,7 @@
     }
   }
 
-  .products-item__icon {
+  .goods-item__icon {
     width: 60px;
     height: 60px;
     margin: 0 auto;
@@ -62,12 +62,12 @@
 }
 
 @include respond-to(large) {
-  .products-item {
+  .goods-item {
     padding: 30px 5px;
     padding-bottom: 26px;
   }
 
-  .products-item__icon {
+  .goods-item__icon {
     width: 70px;
     height: 70px;
     margin-bottom: 28px;

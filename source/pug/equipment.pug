@@ -2,7 +2,41 @@ extends ./templates/template
 
 block vars
     - var pageTitle = 'Техальянс'
-    - var pageId = 2
+    - var pageId = 3
+    -
+        var asideNav = [
+            {
+                text: 'Экскаваторы',
+                mix: 'active',
+            },
+            {
+                text: 'Фронтальные погрузчики',
+            },
+            {
+                text: 'Погрузчики вилочные',
+            },
+            {
+                text: 'Погрузчики телескопические',
+            },
+            {
+                text: 'Погрузчики с бортовым поворотом',
+            },
+            {
+                text: 'Перегружатели',
+            },
+            {
+                text: 'Самосвалы Moxy',
+            },
+            {
+                text: 'Разрушители зданий',
+            },
+            {
+                text: 'Техника для уборки помещений',
+            },
+            {
+                text: 'Прочее',
+            }
+        ]
     -
         var brends = [
             {
@@ -31,17 +65,51 @@ block vars
                 mod: '',
             },
         ]
+    -
+        var eqiupment = [
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+            {
+                image: 'eqiupment01.jpg',
+                heading: 'Гусеничный экскаватор Doosan DX55LC'
+            },
+        ]
+
 
 block content
     main.content
         .content__wrap
-            h1 Техника
+            h1 Экскаваторы
             +slider-brends({
-                mix: 'content__brends content__brends--tech',
+                mix: 'content__brends',
             })
-            +assortiment({
-                mix: 'content__assortiment',
-            })
+            .content__row
+                aside.content__aside
+                    +aside-nav({
+                        items: asideNav,
+                    })
+                .content__main
+                    +eqiupment-list({
+                        items: eqiupment
+                    })
             p.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

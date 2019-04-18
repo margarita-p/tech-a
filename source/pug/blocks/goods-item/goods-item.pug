@@ -1,13 +1,13 @@
-mixin products-item(data)
+mixin goods-item(data)
     +el({
-        class: 'products-item',
+        class: 'goods-item',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
         text: data.text,
         before: {
             tag: 'svg',
-            class: 'products-item__icon',
+            class: 'goods-item__icon',
             icon: data.icon,
             width: '80',
             height: '80'

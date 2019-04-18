@@ -1,0 +1,45 @@
+mixin equipment-item(data)
+    +el({
+        class: 'equipment-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'a',
+            class: 'equipment-item__image-wrap',
+        })
+            img.equipment-item__image(src='./assets/upload/' + data.image, alt='')
+        .equipment-item__content
+            +el({
+                tag: 'h3',
+                mix: 'equipment-item__heading',
+                before: {
+                    tag: 'a',
+                    class: 'equipment-item__heading-link',
+                    text: data.heading,
+                }
+            })
+            +el({
+                tag: 'table',
+                class: 'equipment-item__table',
+            })
+                tbody
+                    tr
+                        td Мощность, л.с. при об. в мин.
+                        td 56,4/2000
+                    tr
+                        td Рабочий вес, кг
+                        td 5600
+                    tr
+                        td Макс. глубина копания, мм
+                        td 3785
+                    tr
+                        td Объем ковша, м3
+                        td 0,18
+            +button({
+                tag: 'a',
+                mix: 'eqiupment__button',
+                text: 'Подробнее',
+                mod: ['small', 'border-primary'],
+            })

@@ -1,0 +1,14 @@
+mixin eqiupment-list(data)
+    +el({
+        tag: 'ul',
+        class: 'equipment-list',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        each item in data.items
+            li.equipment-list__item
+                +equipment-item({
+                    image: item.image,
+                    heading: item.heading,
+                })
