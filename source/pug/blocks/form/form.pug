@@ -11,7 +11,7 @@ mixin form(data)
                     if item.firstName
                         +field({
                             mix: 'form__field',
-                            icon: item.icon ? 'user-circle' : '',
+                            icon: item.icon,
                             mod:  item.modField,
                             label: 'Введите имя',
                             name: 'user',
@@ -20,7 +20,7 @@ mixin form(data)
                     if item.lastName
                         +field({
                             mix: 'form__field',
-                            icon: item.icon ? 'user-circle' : '',
+                            icon: item.icon,
                             mod:  item.modField,
                             label: 'Фамилия',
                             name: 'user',
@@ -29,7 +29,7 @@ mixin form(data)
                     if item.email
                         +field({
                             mix: 'form__field',
-                            icon: item.icon ? 'email-circle' : '',
+                            icon: item.icon,
                             mod: item.modField,
                             label: 'Введите e-mail:',
                             type: 'email',
@@ -39,23 +39,32 @@ mixin form(data)
                     if item.tel
                         +field({
                             mix: 'form__field',
-                            icon: item.icon ? 'tel-circle' : '',
+                            icon: item.icon,
                             mod: item.modField,
                             label: 'Введите телефон',
                             type: 'tel',
                             name: 'tel',
                             placeholder: 'Введите телефон:'
                         })
+                    if item.text
+                        +field({
+                            mix: 'form__field',
+                            icon: item.text.icon,
+                            mod: item.text.modField,
+                            label: item.text.placeholder,
+                            type: 'text',
+                            name: item.text.name,
+                            placeholder: item.text.placeholder,
+                        })
                     if item.message
                         +field({
                             tag: 'textarea',
                             mix: 'form__field',
-                            icon: item.icon ? 'message-circle' : '',
-                            mod: item.modField,
-                            label: 'Вопрос',
-                            type: 'email',
+                            icon: item.message.icon,
+                            mod: item.message.mod,
+                            label: item.message.placeholder,
                             name: 'message',
-                            placeholder: data.message
+                            placeholder: item.message.placeholder
                         })
             if data.confirm
                 .form__confirm
@@ -71,7 +80,7 @@ mixin form(data)
             })
                 +button({
                     mix: 'form__submit',
-                    mod: 'bg-primary',
+                    mod: ['bg-primary', 'large'],
                     type: 'submit',
                     text: data.submit
                 })

@@ -3,7 +3,7 @@ mixin button(data)
         +el({
             tag: 'label',
             class: 'button',
-            mod: ['submit', data.mod],
+            mod: data.mod,
             mix: data.mix,
             js: data.js,
         })

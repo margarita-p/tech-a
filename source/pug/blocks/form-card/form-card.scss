@@ -2,6 +2,10 @@
   width: 100%;
   padding: 20px;
   background-color: color(white);
+
+  &--shadow {
+    box-shadow: 3px 3px 7px 0 rgba(#000, 0.35);
+  }
 }
 
 .form-card__heading {
@@ -24,12 +28,10 @@
   font-size: 20px;
 }
 
-
 @include respond-to(medium) {
   .form-card {
     padding: 30px;
   }
-
 }
 
 @include respond-to(large) {

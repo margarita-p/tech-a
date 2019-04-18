@@ -1,0 +1,51 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Техальянс'
+    - var pageId = 7
+
+block content
+    main.content
+        .content__wrap
+            h1 Вакансии
+            .content__row
+                .content__col.content__col--right
+                    p.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                .content__col.content__col--left
+                    +form-card({
+                        mod: 'shadow',
+                        heading: 'Оставить заявку на вакансию'
+                    })
+                        +form({
+                            group: [
+                                {
+                                    firstName: true,
+                                    tel: true
+                                },
+                                {
+                                    email: true,
+                                    text: {
+                                        name: 'vacancy',
+                                        placeholder: 'Желаемая должность:',
+                                    }
+                                },
+                                {
+                                    message: {
+                                        placeholder: 'Ваш комментарий:',
+                                    }
+                                }
+                            ],
+                            confirm: true,
+                            submit: 'Отправить заявку'
+                        })

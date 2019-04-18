@@ -1,5 +1,5 @@
 .content {
-  padding-top: 30px;
+  padding-top: 35px;
   padding-bottom: 60px;
 }
 
@@ -7,7 +7,7 @@
   @include wrapper;
 }
 
-.content__row {
+.content__with-aside {
   margin-bottom: 30px;
 }
 
@@ -49,11 +49,11 @@
 
 @include respond-to(medium) {
   .content {
-    padding-top: 40px;
+    padding-top: 45px;
     padding-bottom: 80px;
   }
 
-  .content__row {
+  .content__with-aside {
     margin-bottom: 40px;
   }
 
@@ -92,7 +92,7 @@
 }
 
 @include respond-to(medium-lg) {
-  .content__row {
+  .content__with-aside {
     display: flex;
   }
 
@@ -104,6 +104,22 @@
 
   .content__main {
     width: calc(100% - 290px);
+  }
+
+  .content__row {
+    display: flex;
+  }
+
+  .content__col {
+    width: calc(50% - 15px);
+
+    p {
+      padding-right: 40px;
+    }
+
+    &--right {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -136,5 +152,11 @@
 
   .content__assortiment {
     margin-bottom: 60px;
+  }
+
+  .content__col {
+    p {
+      padding-right: 70px;
+    }
   }
 }

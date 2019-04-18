@@ -16,6 +16,7 @@
   padding-left: 20px;
   color: color(gray);
   font-size: 12px;
+  line-height: 14px;
 
   &::before,
   &::after {
@@ -27,7 +28,7 @@
 
   &::before {
     left: 0;
-    top: 2px;
+    top: 0px;
     width: 12px;
     height: 12px;
     border: 1px solid color(light-gray);
@@ -35,7 +36,7 @@
 
   &::after {
     opacity: 0;
-    top: 5px;
+    top: 3px;
     left: 3px;
     width: 7px;
     height: 4px;

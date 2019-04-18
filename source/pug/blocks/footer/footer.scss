@@ -1,7 +1,7 @@
 .footer {
-  padding-top: 28px;
-  padding-bottom: 20px;
-  border-top: 16px solid color(primary);
+  padding-top: 25px;
+  padding-bottom: 30px;
+  border-top: 12px solid color(primary);
   background-color: color(white);
   color: color(gray);
   text-align: center;
@@ -25,13 +25,16 @@
   @include wrapper;
 }
 
-.footer__logo,
 .footer__info,
 .footer__company,
 .footer__nav--left,
 .footer__group-2,
 .footer__address {
   margin-bottom: 20px;
+}
+
+.footer__logo {
+  margin-bottom: 16px;
 }
 
 .footer__title {
@@ -46,7 +49,7 @@
 }
 
 .footer__item {
-  margin-bottom: 0;
+  margin-bottom: 4px;
   @include list-no;
 
   a {
@@ -90,6 +93,7 @@
 @include respond-to(620px) {
   .footer {
     text-align: left;
+    border-top: 14px solid color(primary);
   }
 
   .footer__group-1,
@@ -108,6 +112,7 @@
     flex-shrink: 0;
     width: 200px;
     margin-right: 40px;
+    padding-top: 7px;
   }
 
   .footer__group-2 {
@@ -144,7 +149,11 @@
   }
 }
 
-@include respond-to(920px) {
+@include respond-to(medium-lg) {
+  .footer {
+    border-top: 16px solid color(primary);
+  }
+
   .footer__wrap {
     display: flex;
   }
