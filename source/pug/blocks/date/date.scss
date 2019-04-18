@@ -1,5 +1,14 @@
 .date {
+  margin-bottom: mb(sm);
   font-size: 11px;
   line-height: 11px;
   color: #666;
+}
+
+@include respond-to(medium) {
+  margin-bottom: bm(md);
+}
+
+@include respond-to(large) {
+  margin-bottom: bm(lg);
 }

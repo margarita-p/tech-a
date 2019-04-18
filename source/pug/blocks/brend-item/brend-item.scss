@@ -10,7 +10,7 @@
   box-shadow: 2px 2px 7px 0px rgba(#000, 0.2);
 
   &--shift-top {
-    .slider-brends__logo {
+    .brend-item__logo {
       transform: translateY(-3px);
     }
   }
@@ -28,7 +28,5 @@
 }
 
 @include respond-to(580px) {
-  // .brend-item {
-  //   display: flex;
-  // }
+
 }

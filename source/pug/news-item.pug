@@ -1,0 +1,136 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Техальянс'
+    - var pageId = 8
+    -
+        var news = [
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+            {
+                image: 'news01.jpg',
+                date: '25 ноября 2018 года | 18:35',
+                heading: 'Открытие нового завода спех. техники в Москве',
+                text: '25 ноября 2018 года прошло торжественное открытие нового завода прошло торжественное открытие нового завода',
+            },
+        ];
+
+block content
+    main.content
+        .content__wrap
+            +breadcrumbs({
+                mix: 'content__breadcrumbs',
+                items: ['Главная','Новости', 'Открытие нового завода спех. техники в Москве']
+            })
+            h1 Новости
+            article.article
+                p
+                    img(src='./assets/upload/news-item01.jpg', width='1140' alt='')
+                +date({
+                    date: '25 ноября 2018 года | 18:35'
+                })
+                h4 Открытие нового завода спех. техники в Москве
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p
+                    img(src='./assets/upload/news-item01.jpg', width='1140' alt='')
+                p.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum Lorem ipsum dolor sit amet
+                p.
+                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum
+            .content__button-bottom-wrap
+                +button({
+                    tag: 'a',
+                    mix: 'content__button-bottom',
+                    text: 'Все новости',
+                    mod: ['border-primary', 'large'],
+                })

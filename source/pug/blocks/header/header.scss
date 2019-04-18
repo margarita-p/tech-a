@@ -144,8 +144,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    padding-left: pads(large);
-    padding-right: pads(large);
+    padding-left: pads(large) - 10px;
+    padding-right: pads(large) - 10px;
     color: color(black);
   }
 

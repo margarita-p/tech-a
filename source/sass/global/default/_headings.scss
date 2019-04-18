@@ -2,11 +2,11 @@
 $heading-styles: (
   small: (
     h1: (fs: 24px, lh: 1.2, mb: 32px, fw: 700),
-    h2: (fs: 20px, lh: 1.3, mb: 12px, fw: 400),
-    h3: (fs: 18px, lh: 1.4, mb: 10px, fw: 400),
-    h4: (fs: 16px, lh: 1.5, mb: 8px,  fw: 500),
-    h5: (fs: 14px, lh: 1.5, mb: 6px,  fw: 500),
-    h6: (fs: 14px, lh: 1.5, mb: 4px,  fw: 500)
+    h2: (fs: 20px, lh: 1.3, mb: 12px, fw: 700),
+    h3: (fs: 18px, lh: 1.4, mb: 10px, fw: 700),
+    h4: (fs: 18px, lh: 1.5, mb: 8px,  fw: 700),
+    h5: (fs: 16px, lh: 1.5, mb: 6px,  fw: 700),
+    h6: (fs: 16px, lh: 1.5, mb: 4px,  fw: 600)
   ),
   medium: (
     h1: (fs: 32px, mb: 36px),
@@ -20,8 +20,8 @@ $heading-styles: (
     h1: (fs: 36px, mb: 40px),
     h2: (fs: 30px, mb: 16px),
     h3: (fs: 24px, mb: 14px),
-    h4: (fs: 20px, mb: 12px),
-    h5: (fs: 18px, mb: 10px),
+    h4: (fs: 18px, mb: 12px),
+    h5: (fs: 16px, mb: 10px),
     h6: (fs: 16px, mb: 8px)
   ),
 );
