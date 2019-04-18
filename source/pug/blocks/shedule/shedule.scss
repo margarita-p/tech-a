@@ -79,7 +79,7 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(1020px) {
   .shedule__item {
     margin-bottom: 25px;
   }
@@ -95,8 +95,8 @@
   }
 
   .shedule__col {
-    width: calc(25% - 53px);
-    margin-right: 70px;
+    width: calc(25% - 15px);
+    margin-right: 20px;
     margin-bottom: 0;
     padding-right: 20px;
     padding-bottom: 0;
@@ -104,12 +104,27 @@
     border-right: 1px solid color(dark-light);
 
     &:nth-child(2n) {
-      margin-right: 70px;
+      margin-right: 20px;
     }
 
     &:last-child {
       margin-right: 0;
       border-right: none;
+    }
+  }
+}
+
+@include respond-to(large) {
+  .shedule__col {
+    width: calc(25% - 53px);
+    margin-right: 70px;
+
+    &:nth-child(2n) {
+      margin-right: 70px;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
