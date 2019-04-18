@@ -1,0 +1,27 @@
+mixin shedule(data)
+    +el({
+        class: 'shedule',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .shedule__row
+            each item in data.items
+                .shedule__col
+                    +el({
+                        tag: 'h4',
+                        class: 'shedule__heading',
+                        text: item.heading
+                    })
+                    +el({
+                        tag: 'ul',
+                        class: 'shedule__list'
+                    })
+                        each subItem in item.items
+                            +shedule-item({
+                                tag: 'li',
+                                mix: 'shedule__item',
+                                icon: subItem.icon,
+                                heading: subItem.heading,
+                                text: subItem.text
+                            })

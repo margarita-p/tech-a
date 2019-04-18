@@ -1,0 +1,13 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Техальянс'
+    - var pageId = 9
+
+block content
+    main.content
+        .content__wrap
+            h1 Контакты
+            +panel-with-tabs({
+
+            })

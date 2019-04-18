@@ -1,43 +1,4 @@
 mixin header(data)
-    -
-        var nav = [
-            {
-                text: 'О компании',
-                href: 'main.html',
-            },
-            {
-                text: 'Техника',
-                href: 'tecknica.html',
-            },
-            {
-                text: 'Доп. оборудование',
-                href: '',
-            },
-            {
-                text: 'Лизинг',
-                href: '',
-            },
-            {
-                text: 'Сервис',
-                href: 'service.html',
-            },
-            {
-                text: 'Отзывы',
-                href: 'reviews.html',
-            },
-            {
-                text: 'Вакансии',
-                href: 'vacancy.html',
-            },
-            {
-                text: 'Новости',
-                href: 'news-list.html',
-            },
-            {
-                text: 'Контакты',
-                href: 'contacts.html',
-            },
-        ];
 
     +el({
         tag: 'header',
@@ -71,7 +32,7 @@ mixin header(data)
                 })
         nav.header__main-nav-block(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
             +main-nav({
-                items: nav,
+                items: mainNav,
                 mix: 'header__main-nav'
             })
             .header__main-nav-company

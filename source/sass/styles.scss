@@ -9,6 +9,7 @@
 @import "./global/default/default";
 @import "./global/animation";
 @import "./global/helpers";
+@import "./global/js";
 
 @import "./blocks/sticky-footer";
 @import "../pug/blocks/button/button";
@@ -47,13 +48,15 @@
 @import "../pug/blocks/news-card/news-card";
 @import "../pug/blocks/goods-list/goods-list";
 @import "../pug/blocks/goods-item/goods-item";
+@import "../pug/blocks/aside-nav/aside-nav";
+@import "../pug/blocks/equipment-list/equipment-list";
+@import "../pug/blocks/equipment-item/equipment-item";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/panel-with-tabs/panel-with-tabs";
 
 @import "../pug/blocks/main-section/main-section";
 @import "./blocks/content";
 @import "./blocks/article";
 
-@import "../pug/blocks/aside-nav/aside-nav";
-@import "../pug/blocks/equipment-list/equipment-list";
-@import "../pug/blocks/equipment-item/equipment-item";
-
-@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/shedule/shedule";
+@import "../pug/blocks/shedule-item/shedule-item";

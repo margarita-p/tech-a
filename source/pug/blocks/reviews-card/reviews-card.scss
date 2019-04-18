@@ -13,12 +13,6 @@
   margin-bottom: 18px;
   background-color: color(light-gray);
   text-decoration: none;
-
-  // @include hover {
-  //   .reviews-card__image {
-  //     transform: scale(1.05);
-  //   }
-  // }
 }
 
 .reviews-card__image {
@@ -26,7 +20,6 @@
   width: 100%;
   height: 100%;
   @include ofi(cover, center);
-  // transition: duration(lg);
 }
 
 .reviews-card__content {
@@ -36,13 +29,11 @@
 }
 
 .reviews-card__heading {
-  font-size: 16px;
   margin-bottom: 28px;
 }
 
 .reviews-card__text {
-  // overflow-y: auto;
-  overflow: hidden;
+  overflow-y: auto;
   height: 156px;
   margin-top: auto;
   margin-bottom: 0;
@@ -70,6 +61,10 @@
 @include respond-to(large) {
   .reviews-card {
     padding: 30px;
+  }
+
+  .reviews-card__heading {
+    margin-bottom: 28px;
   }
 
   .reviews-card__image-wrap {

@@ -42,10 +42,7 @@
 
     &.active {
       .main-nav__link {
-        &::after {
-          opacity: 1;
-          background-color: color(primary);
-        }
+        color: color(primary);
       }
     }
   }

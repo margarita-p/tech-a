@@ -1,0 +1,21 @@
+mixin shedule-item(data)
+    +el({
+        tag: data.tag,
+        class: 'shedule-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'shedule-item__heading',
+            before: {
+                tag: 'svg',
+                icon: data.icon,
+                class: 'shedule-item__icon'
+            },
+            text: data.heading
+        })
+        +el({
+            class: 'shedule-item__text',
+            text: data.text
+        })
