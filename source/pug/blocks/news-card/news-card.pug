@@ -8,6 +8,7 @@ mixin news-card(data)
     })&attributes(attributes)
         +el({
             tag: 'a',
+            href: 'news-item.html',
             class: 'news-card__image-wrap',
         })
             img.news-card__image(src='./assets/upload/' + data.image, alt='')
@@ -21,6 +22,7 @@ mixin news-card(data)
                 mix: 'news-card__heading',
                 heading: data.heading,
                 link: true,
+                href: 'news-item.html'
             })
             +el({
                 tag: 'p',

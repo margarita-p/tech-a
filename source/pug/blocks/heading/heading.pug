@@ -12,6 +12,7 @@ mixin heading(data)
                 tag: 'a',
                 class: 'heading__link',
                 text: data.heading,
+                href: data.href,
             })
         if data.subheading
             +el({
