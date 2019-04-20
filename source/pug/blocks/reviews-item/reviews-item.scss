@@ -1,4 +1,4 @@
-.reviews-card {
+.reviews-item {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,7 +6,7 @@
   background-color: color(light);
 }
 
-.reviews-card__image-wrap {
+.reviews-item__image-wrap {
   overflow: hidden;
   display: block;
   height: 26vw;
@@ -15,24 +15,24 @@
   text-decoration: none;
 }
 
-.reviews-card__image {
+.reviews-item__image {
   display: block;
   width: 100%;
   height: 100%;
   @include ofi(cover, center);
 }
 
-.reviews-card__content {
+.reviews-item__content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.reviews-card__heading {
+.reviews-item__heading {
   margin-bottom: 28px;
 }
 
-.reviews-card__text {
+.reviews-item__text {
   overflow-y: auto;
   height: 156px;
   margin-top: auto;
@@ -42,36 +42,36 @@
 }
 
 @include respond-to(small-lg) {
-  .reviews-card__image-wrap {
+  .reviews-item__image-wrap {
     height: 16vw;
   }
 
-  .reviews-card__text {
+  .reviews-item__text {
     height: 168px;
     line-height: 28px;
   }
 }
 
 @include respond-to(medium-lg) {
-  .reviews-card__image-wrap {
+  .reviews-item__image-wrap {
     height: 10vw;
   }
 }
 
 @include respond-to(large) {
-  .reviews-card {
+  .reviews-item {
     padding: 30px;
   }
 
-  .reviews-card__heading {
+  .reviews-item__heading {
     margin-bottom: 28px;
   }
 
-  .reviews-card__image-wrap {
+  .reviews-item__image-wrap {
     height: 105px;
   }
 
-  .reviews-card__text {
+  .reviews-item__text {
     height: 180px;
     line-height: 30px;
   }

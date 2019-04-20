@@ -3,34 +3,6 @@ extends ./templates/template
 block vars
     - var pageTitle = 'Техальянс'
     - var pageId = 2
-    -
-        var brends = [
-            {
-                image: 'umg.jpg',
-                mod: '',
-            }, {
-                image: 'sunward.png',
-                mod: 'shift-top',
-            },{
-                image: 'xcmg.png',
-                mod: 'shift-top',
-            },{
-                image: 'dieci.png',
-                mod: '',
-            },{
-                image: 'liugong.jpg',
-                mod: '',
-            },{
-                image: 'disd.jpg',
-                mod: '',
-            },{
-                image: 'doosan.jpg',
-                mod: 'lg',
-            },{
-                image: 'felix.png',
-                mod: '',
-            },
-        ]
 
 block content
     main.content
@@ -38,6 +10,7 @@ block content
             h1 Техника
             +slider-brends({
                 mix: 'content__brends content__brends--tech',
+                items: brends
             })
             +assortiment({
                 mix: 'content__assortiment',

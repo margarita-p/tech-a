@@ -49,8 +49,8 @@
 }
 
 .footer__item {
-  margin-bottom: 4px;
   @include list-no;
+  margin-bottom: 0;
 
   a {
     text-decoration: none;
@@ -180,6 +180,10 @@
     width: 20%;
   }
 
+  .footer__item {
+    margin-bottom: 4px;
+  }
+
   .footer__address,
   .footer__phone {
     width: 100%;
@@ -189,8 +193,4 @@
     margin-bottom: 26px;
     padding-right: 0;
   }
-}
-
-@include respond-to(large) {
-
 }

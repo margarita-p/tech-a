@@ -8,9 +8,8 @@ mixin panel-with-tabs(data)
         +el({
             tag: 'ul',
             class: 'panel-with-tabs__list',
-
         })&attributes(attributes)
-            each item, index in ['Город Уфа', 'Город Краснодар']
+            each item, index in data.tabs
                 +el({
                     tag: 'li',
                     class: 'panel-with-tabs__item',
@@ -28,12 +27,14 @@ mixin panel-with-tabs(data)
                             text: item,
                         }
                     })(data-tab='tab-' + (index + 1))
-        .tab-1.js-tabs-content.active
-            .panel-with-tabs__content
-              +shedule({
-                  mix: 'panel-with-tabs__shedule',
-                  items: shedule
-              })
-        .tab-2.js-tabs-content
-            .panel-with-tabs__content
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores ducimus soluta, blanditiis quam libero est temporibus eum accusamus, debitis deleniti, officia maxime voluptatem cum. Soluta quos doloribus dolor distinctio, quia ducimus iste dolores reprehenderit ipsam perspiciatis voluptate in perferendis nobis quas ipsa suscipit natus sint repellendus quisquam repellat illo.
+        each item, index in data.tabs
+            +el({
+                class: 'tab-' + (index + 1),
+                js: 'tabs-content',
+                mix: index == 0 ? 'active' : '',
+            })
+                .panel-with-tabs__content
+                    if index == 0
+                        block content1
+                    else if index == 1
+                        block content2

@@ -1,48 +1,4 @@
 mixin assortiment(data)
-    -
-        var assortiment = [
-            {
-                heading: 'Экскаваторы',
-                image: '01'
-            },
-            {
-                heading: 'Фронтальные погрузчики',
-                image: '02'
-            },
-            {
-                heading: 'Погрузчики вилочные',
-                image: '03'
-            },
-            {
-                heading: 'Погрузчики телескопические',
-                image: '04'
-            },
-            {
-                heading: 'Погрузчики с бортовым поворотом',
-                image: '01'
-            },
-            {
-                heading: 'Самосвалы Moxy',
-                image: '02'
-            },
-            {
-                heading: 'Перегружатели',
-                image: '03'
-            },
-            {
-                heading: 'Разрушители зданий',
-                image: '04'
-            },
-            {
-                heading: 'Техника для уборки помещений',
-                image: '05'
-            },
-            {
-                heading: 'Прочее',
-                image: '05'
-            },
-        ]
-
     +el({
         tag: 'ul',
         class: 'assortiment',
@@ -57,5 +13,6 @@ mixin assortiment(data)
             })
                 +assortiment-item({
                     heading: item.heading,
-                    image: item.image
+                    image: item.image,
+                    href: 'equipment.html'
                 })

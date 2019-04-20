@@ -7,11 +7,12 @@ mixin field(data)
             mix: data.mix,
             js: data.js,
         })
-            +el({
-                tag: 'span',
-                class: data.isLabel ? 'field__label' : 'hidden',
-                text: data.label,
-            })
+            if data.label
+                +el({
+                    tag: 'span',
+                    class: data.isLabel ? 'field__label' : 'hidden',
+                    text: data.label,
+                })
             if data.icon
                 +el({
                     tag: 'span',

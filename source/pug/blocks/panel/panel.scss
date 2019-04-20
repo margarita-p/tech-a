@@ -1,0 +1,21 @@
+.panel {
+  padding: 20px;
+  background-color: color(light);
+}
+
+.panel__heading {
+  margin-bottom: 10px;
+}
+
+@include respond-to(medium) {
+  .panel {
+    padding: 25px;
+  }
+}
+
+@include respond-to(large) {
+  .panel {
+    padding: 30px;
+    padding-bottom: 25px
+  }
+}

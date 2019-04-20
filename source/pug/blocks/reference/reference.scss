@@ -1,0 +1,301 @@
+.reference {
+  position: relative;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: #000;
+  background-image: url('../assets/images/bg-reference.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mask(rgba(#000, 0.7));
+
+  &--callback {
+    .reference__text-top {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.reference__wrap {
+  @include wrapper;
+}
+
+.reference__row {
+  position: relative;
+  z-index: 1;
+}
+
+.reference__col {
+  &--left {
+    margin-bottom: 25px;
+  }
+}
+
+.reference__text-top {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: color(white);
+}
+
+.reference__text-top,
+.reference__text-bottom {
+  text-align: center;
+  line-height: 1.3;
+}
+
+.reference__text-top {
+  span {
+    color: color(primary);
+  }
+}
+
+.reference__text-bottom  {
+  margin-bottom: 10px;
+}
+
+.reference__number,
+.reference__number-descr {
+  display: inline-block;
+}
+
+.reference__number {
+  margin-right: 8px;
+  color: color(white);
+  font-size: 76px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.reference__number-descr {
+  position: relative;
+  padding-left: 20px;
+  color: color(white);
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    bottom: 4px;
+    width: 10px;
+    background-color: color(primary);
+  }
+}
+
+.reference__descr,
+.reference__phone {
+  display: block;
+  color: color(white);
+}
+
+.reference__descr {
+  font-weight: 400;
+  font-size: 18px;
+
+  &--large {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+}
+
+.reference__phone {
+  font-family: font(primary);
+  font-weight: 700;
+  font-size: 29px;
+  text-decoration: none;
+}
+
+.reference__arrow {
+  display: none;
+}
+
+@include respond-to(medium) {
+  .reference {
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    &--callback {
+      .reference__text-top {
+        margin-bottom: 40px;
+      }
+
+      .reference__phone {
+        margin-bottom: 20px;
+      }
+
+      .reference__arrow {
+        margin-left: 280px;
+      }
+    }
+  }
+
+  .reference__row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .reference__col {
+    width: calc(50% - 15px);
+
+    &--left {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  .reference__text-top,
+  .reference__text-bottom {
+    text-align: left;
+  }
+
+  .reference__text-top {
+    font-size: 32px;
+  }
+
+  .reference__text-bottom {
+    margin-bottom: 0;
+  }
+
+  .reference__number {
+    font-size: 90px;
+  }
+
+  .reference__number-descr {
+    font-size: 23px;
+    line-height: 26px;
+  }
+
+  .reference__descr {
+    font-size: 22px;
+
+    &--large {
+      font-size: 26px;
+    }
+  }
+
+  .reference__phone {
+    font-size: 42px;
+  }
+
+  .reference__arrow {
+    display: block;
+    width: 65px;
+    height: 65px;
+    margin-left: 260px;
+    fill: color(white);
+  }
+}
+
+@include respond-to(medium-lg) {
+  .reference {
+    padding-top: 80px;
+    padding-bottom: 36px;
+
+    &--callback {
+      .reference__text-top {
+        margin-bottom: 45px;
+      }
+
+      .reference__arrow {
+        margin-left: 340px;
+      }
+    }
+  }
+
+  .reference__text-top {
+    margin-bottom: 20px;
+  }
+
+  .reference__number {
+    margin-right: 16px;
+    font-size: 110px;
+  }
+
+  .reference__number-descr {
+    padding-left: 32px;
+    font-size: 28px;
+    line-height: 32px;
+
+    &::before {
+      top: 6px;
+      bottom: 6px;
+      width: 14px;
+    }
+  }
+
+  .reference__descr {
+    font-size: 24px;
+
+    &--large {
+      font-size: 30px;
+    }
+  }
+
+  .reference__phone {
+    font-size: 50px;
+  }
+
+  .reference__arrow {
+    margin-left: 320px;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@include respond-to(large) {
+  .reference {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &--recomendation {
+
+    }
+
+    &--callback {
+      .reference__text-top {
+        margin-bottom: 55px;
+      }
+
+      .reference__arrow {
+        margin-left: 380px;
+      }
+    }
+  }
+
+  .reference__text-top {
+    font-size: 35px;
+  }
+
+  .reference__number {
+    margin-right: 20px;
+    font-size: 130px;
+  }
+
+  .reference__number-descr {
+    padding-left: 40px;
+    font-size: 30px;
+    line-height: 36px;
+
+    &::before {
+      top: 4px;
+      bottom: 4px;
+      width: 16px;
+    }
+  }
+
+  .reference__phone {
+    font-size: 60px;
+  }
+
+  .reference__arrow {
+    margin-left: 410px;
+    width: 85px;
+    height: 85px;
+  }
+}

@@ -29,14 +29,7 @@ mixin button(data)
         })&attributes(attributes)
             if data.icon
                 +el({
-                    tag: 'span',
-                    class: 'button__icon',
-                })
-                    +el({
-                        tag: 'svg',
-                        icon: data.icon,
-                    })
-            if data.cross
-                +cross({
-                    mix: 'button__cross',
+                    tag: 'svg',
+                    icon: data.icon,
+                    class: 'button__icon'
                 })

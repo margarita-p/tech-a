@@ -11,5 +11,11 @@ mixin form-card(data)
                 class: 'form-card__heading',
                 text: data.heading,
             })
+                if data.subheading
+                    +el({
+                        tag: 'span',
+                        class: 'form-card__subheading',
+                        text: data.subheading,
+                    })
         .form-card__content
             block

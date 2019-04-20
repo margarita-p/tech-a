@@ -11,7 +11,7 @@ mixin slider-brends(data)
             mix: data.mix,
             js: 'slider-brends',
         })&attributes(attributes)
-            each item in brends
+            each item in data.items
                 +el({
                     class: 'slider-brends__item',
                 })

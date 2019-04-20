@@ -8,7 +8,7 @@ mixin news-list(data)
     })&attributes(attributes)
         each item in data.items
             li.news-list__item
-                +news-card({
+                +news-item({
                     image: item.image,
                     date: item.date,
                     heading: item.heading,

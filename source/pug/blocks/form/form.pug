@@ -16,15 +16,15 @@ mixin form(data)
                             label: 'Введите имя',
                             name: 'user',
                             placeholder: 'Введите имя:'
-                        })
+                        })(aria-required='true', aria-invalid='false')
                     if item.lastName
                         +field({
                             mix: 'form__field',
                             icon: item.icon,
                             mod:  item.modField,
-                            label: 'Фамилия',
+                            label: 'Введите фамилию',
                             name: 'user',
-                            placeholder: 'Введите фамилию'
+                            placeholder: 'Введите фамилию:'
                         })
                     if item.email
                         +field({
@@ -35,7 +35,7 @@ mixin form(data)
                             type: 'email',
                             name: 'email',
                             placeholder: 'Введите e-mail:'
-                        })
+                        })(aria-required='true', aria-invalid='false')
                     if item.tel
                         +field({
                             mix: 'form__field',
@@ -45,7 +45,7 @@ mixin form(data)
                             type: 'tel',
                             name: 'tel',
                             placeholder: 'Введите телефон:'
-                        })
+                        })(aria-required='true', aria-invalid='false')
                     if item.text
                         +field({
                             mix: 'form__field',
@@ -55,7 +55,7 @@ mixin form(data)
                             type: 'text',
                             name: item.text.name,
                             placeholder: item.text.placeholder,
-                        })
+                        })(aria-required='true', aria-invalid='false')
                     if item.message
                         +field({
                             tag: 'textarea',
@@ -65,15 +65,14 @@ mixin form(data)
                             label: item.message.placeholder,
                             name: 'message',
                             placeholder: item.message.placeholder
-                        })
+                        })(aria-required='true', aria-invalid='false')
             if data.confirm
                 .form__confirm
                     +checkbox-confirm({
                         mod: 'small',
                         label: 'Согласие на обработку персональных данных',
-                        required: true,
                         checked: true,
-                    })
+                    })(aria-required='true', aria-invalid='false')
             +el({
                 class: 'form__submit-wrap',
                 mod: data.modSubmit

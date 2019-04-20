@@ -1,0 +1,64 @@
+mixin reference(data)
+    +el({
+        tag: 'section',
+        class: 'reference',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .reference__wrap
+            .reference__row
+                .reference__col.reference__col--left
+                    +el({
+                        class: 'reference__text-top',
+                    })
+                        if data.number
+                            | Получите от компании полезные рекомендации <span>по&nbsp;выбору техники</span>
+                        if data.callback
+                            | Чтобы узнать любую <span>подробную информацию,</span>
+                    +el({
+                        class: 'reference__text-bottom',
+                    })
+                        if data.number
+                            span.reference__number 10
+                            span.reference__number-descr
+                                | причин
+                                br
+                                span.text-primary
+                                    | покупать&nbsp;технику
+                                br
+                                | Doosan
+                        if data.callback
+                            span.reference__descr.reference__descr--large Звоните в отдел продаж
+                            +el({
+                                tag: 'a',
+                                href: 'tel:88005114480',
+                                text: '8 <span class="text-primary">(800)</span> 511-44-80',
+                                class: 'reference__phone'
+                            })
+                        +el({
+                            tag: 'svg',
+                            class: 'reference__arrow',
+                            icon: 'arrow-lg',
+                        })
+                .reference__col.reference__col--right
+                    +form-card({
+                        mix: 'reference__form-card',
+                        heading: data.form.heading,
+                        subheading: data.form.subheading
+                    })
+                        +form({
+                            group: [
+                                {
+                                    firstName: true,
+                                    tel: true,
+                                    modGroup: 'row',
+                                },
+                                {
+                                    email: true,
+                                    modGroup: 'last',
+                                }
+                            ],
+                            confirm: true,
+                            submit: data.form.submit
+                        })

@@ -1,14 +1,14 @@
-mixin reviews(data)
+mixin reviews-list(data)
     +el({
         tag: 'ul',
-        class: 'reviews',
+        class: 'reviews-list',
         mod: data.mod,
         mix: data.mix,
         js: data.js,
     })&attributes(attributes)
         each item in data.items
-            li.reviews__item
-                +reviews-card({
+            li.reviews-list__item
+                +reviews-item({
                     image: item.image,
                     heading: item.heading,
                     subheading: item.subheading,

@@ -7,24 +7,16 @@
   @include wrapper;
 }
 
-.content__with-aside {
-  margin-bottom: 30px;
-}
-
 .content__breadcrumbs {
   margin-top: -10px;
   margin-bottom: 25px;
 }
 
-.content__brends {
-  margin-bottom: 30px;
-}
-
-.content__aside {
-  margin-bottom: 30px;
-}
-
-.content__assortiment {
+.content__with-aside,
+.content__brends,
+.content__aside,
+.content__assortiment,
+.content__reference {
   margin-bottom: 30px;
 }
 
@@ -47,13 +39,19 @@
   width: 100%;
 }
 
+.content__equipment-view {
+  margin-bottom: 40px;
+}
+
 @include respond-to(medium) {
   .content {
     padding-top: 45px;
     padding-bottom: 80px;
   }
 
-  .content__with-aside {
+  .content__with-aside,
+  .content__brends,
+  .content__assortiment {
     margin-bottom: 40px;
   }
 
@@ -64,14 +62,6 @@
 
   .content__goods-list {
     margin-top: -95px;
-  }
-
-  .content__brends {
-    margin-bottom: 40px;
-  }
-
-  .content__assortiment {
-    margin-bottom: 40px;
   }
 
   .content__button-bottom {
@@ -88,6 +78,14 @@
     &--space-after {
       margin-bottom: 60px;
     }
+  }
+
+  .content__equipment-view {
+    margin-bottom: 70px;
+  }
+
+  .content__reference {
+    margin-bottom: 60px;
   }
 }
 
@@ -158,5 +156,13 @@
     p {
       padding-right: 70px;
     }
+  }
+
+  .content__equipment-view {
+    margin-bottom: 100px;
+  }
+
+  .content__reference {
+    margin-bottom: 90px;
   }
 }

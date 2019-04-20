@@ -20,3 +20,11 @@
 .no-underline {
   text-decoration: none;
 }
+
+.without-left-line {
+  padding-right: 0;
+
+  &::before {
+    display: none;
+  }
+}

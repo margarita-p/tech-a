@@ -1,0 +1,43 @@
+mixin equipment-view(data)
+    +el({
+        tag: 'section',
+        class: 'equipment-view',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .equipment-view__row
+            .equipment-view__col.equipment-view__col--left
+                .equipment-view__image-wrap
+                    +el({
+                        tag: 'img',
+                        class: 'equipment-view__image',
+                        upload: 'eqiupment-view01.jpg',
+                        width: '585'
+                    })
+            .equipment-view__col.equipment-view__col--right
+                h1.equipment-view__heading Фронтальный погрузчик Sunward SL58W
+                +panel({
+                    mix: 'equipment-view__panel',
+                    headingTag: 'h3',
+                    heading: 'Краткая характеристика модели'
+                })
+                    +specification({
+                        items: specificationShort,
+                        mod: 'bg-light',
+                    })
+                .equipment-view__button-group
+                    +button({
+                        tag: 'a',
+                        mod: ['bg-primary', 'large'],
+                        mix: 'equipment-view__button equipment-view__button--price',
+                        text: 'Узнать цену',
+                    })
+                    +button({
+                        tag: 'a',
+                        mod: ['transparent-primary', 'with-icon-after'],
+                        mix: 'equipment-view__button equipment-view__button--download',
+                        icon: 'pdf',
+                        text: 'Подробное описание',
+                    })
+        block

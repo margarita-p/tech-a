@@ -8,7 +8,6 @@ mixin assortiment-item(data)
         js: data.js,
     })(style='background-image: url(assets/images/assortiment/assortiment' + data.image + '.jpg);')&attributes(attributes)
         +el({
-            tag: 'h3',
             class: 'assortiment-item__title',
             text: data.heading,
         })

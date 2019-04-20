@@ -1,24 +1,24 @@
-mixin reviews-card(data)
+mixin reviews-item(data)
     +el({
         tag: 'article',
-        class: 'reviews-card',
+        class: 'reviews-item',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
         +el({
-            class: 'reviews-card__image-wrap',
+            class: 'reviews-item__image-wrap',
         })
-            img.reviews-card__image(src='./assets/upload/' + data.image, alt='')
-        .reviews-card__content
+            img.reviews-item__image(src='./assets/upload/' + data.image, alt='')
+        .reviews-item__content
             +heading({
                 tag: 'h3',
-                mix: 'reviews-card__heading',
+                mix: 'reviews-item__heading',
                 heading: data.heading,
                 subheading: data.subheading,
             })
             +el({
-                class: 'reviews-card__text',
+                class: 'reviews-item__text',
                 text: data.text,
             })
                 block

@@ -9,5 +9,15 @@ block content
         .content__wrap
             h1 Контакты
             +panel-with-tabs({
-
+                tabs: ['Город Уфа', 'Город Краснодар']
             })
+                append content1
+                    +shedule({
+                        mix: 'panel-with-tabs__shedule',
+                        items: shedule1
+                    })
+                append content2
+                    +shedule({
+                        mix: 'panel-with-tabs__shedule',
+                        items: shedule2
+                    })

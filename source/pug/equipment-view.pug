@@ -1,0 +1,63 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Техальянс'
+    - var pageId = 3
+
+block content
+    main.content
+        .content__wrap
+            +breadcrumbs({
+                mix: 'content__breadcrumbs',
+                items: ['Главная', 'Техника', 'Погрузчики фронтальные', 'Фронтальный погрузчик Sunworld SL58W']
+            })
+            +equipment-view({
+                mix: 'content__equipment-view',
+            })
+                +panel-with-tabs({
+                    tabs: ['Характеристики модели', 'Комплектация модели'],
+                    class: 'equipment-view__tabs'
+                })
+                    append content1
+                        +specification({
+                            items: specification1,
+                            mod: 'bg-light',
+                        })
+                    append content2
+                        +specification({
+                            items: specificationShort,
+                            mod: 'bg-light',
+                        })
+        +reference({
+            mix: 'content__reference',
+            callback: true,
+            mod: 'callback',
+            form: {
+              heading: 'Оставьте заявку на звонок,',
+              subheading: 'чтобы мы связались с Вами в ближайшее время',
+              submit: 'Перезвоните нам',
+            }
+        })
+        .content__wrap
+            p.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum Lorem ipsum dolor sit amet
+            p.
+                Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum
+
+            .content__button-bottom-wrap
+                +button({
+                    tag: 'a',
+                    mix: 'content__button-bottom',
+                    text: 'Смотреть больше',
+                    mod: ['border-primary', 'large'],
+                })

@@ -8,6 +8,7 @@ mixin equipment-item(data)
         +el({
             tag: 'a',
             class: 'equipment-item__image-wrap',
+            href: data.href
         })
             img.equipment-item__image(src='./assets/upload/' + data.image, alt='')
         .equipment-item__content
@@ -18,6 +19,7 @@ mixin equipment-item(data)
                     tag: 'a',
                     class: 'equipment-item__heading-link',
                     text: data.heading,
+                    href: data.href
                 }
             })
             +el({
@@ -42,4 +44,5 @@ mixin equipment-item(data)
                 mix: 'eqiupment__button',
                 text: 'Подробнее',
                 mod: ['small', 'border-primary'],
+                href: data.href
             })

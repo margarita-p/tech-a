@@ -23,7 +23,6 @@ mixin el(data)
     //-  alt по умолчанию ' '
     if data.tag == 'img'
         - elAttr = data.alt ? {alt: data.alt} : {alt: ' '}
-        - var elSrc = './assets/images/'
     //- type по умолчанию 'button'
     if data.tag == 'button'
         - elAttr = data.type ? {type: data.type} : {type: 'button'}
@@ -52,7 +51,7 @@ mixin el(data)
     #{elTag}(
             class = elClass + elMods + elMix + elJs + elAnimate,
             id = data.id,
-            src = data.src ? elSrc + data.src : none,
+            src = data.image ? './assets/images/' + data.image : data.src || data.upload ? './assets/upload/' + data.upload : data.src,
             aria-label = data.ariaLabel,
             title = data.title,
             target = data.target,

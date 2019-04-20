@@ -3,96 +3,6 @@ extends ./templates/template
 block vars
     - var pageTitle = 'Техальянс'
     - var pageId = 3
-    -
-        var asideNav = [
-            {
-                text: 'Экскаваторы',
-                mix: 'active',
-            },
-            {
-                text: 'Фронтальные погрузчики',
-            },
-            {
-                text: 'Погрузчики вилочные',
-            },
-            {
-                text: 'Погрузчики телескопические',
-            },
-            {
-                text: 'Погрузчики с бортовым поворотом',
-            },
-            {
-                text: 'Перегружатели',
-            },
-            {
-                text: 'Самосвалы Moxy',
-            },
-            {
-                text: 'Разрушители зданий',
-            },
-            {
-                text: 'Техника для уборки помещений',
-            },
-            {
-                text: 'Прочее',
-            }
-        ]
-    -
-        var brends = [
-            {
-                image: 'umg.jpg',
-                mod: '',
-            }, {
-                image: 'sunward.png',
-                mod: 'shift-top',
-            },{
-                image: 'xcmg.png',
-                mod: 'shift-top',
-            },{
-                image: 'dieci.png',
-                mod: '',
-            },{
-                image: 'liugong.jpg',
-                mod: 'lg',
-            },{
-                image: 'disd.jpg',
-                mod: '',
-            },{
-                image: 'doosan.jpg',
-                mod: 'lg',
-            },{
-                image: 'felix.png',
-                mod: '',
-            },
-        ]
-    -
-        var eqiupment = [
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-            {
-                image: 'eqiupment01.jpg',
-                heading: 'Гусеничный экскаватор Doosan DX55LC'
-            },
-        ]
-
 
 block content
     main.content
@@ -100,6 +10,7 @@ block content
             h1 Экскаваторы
             +slider-brends({
                 mix: 'content__brends',
+                items: brends
             })
             .content__with-aside
                 aside.content__aside
@@ -124,7 +35,6 @@ block content
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
                 qui officia deserunt mollit anim id est laborum
-
             .content__button-bottom-wrap
                 +button({
                     tag: 'a',

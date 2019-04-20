@@ -1,7 +1,7 @@
-mixin news-card(data)
+mixin news-item(data)
     +el({
         tag: 'article',
-        class: 'news-card',
+        class: 'news-item',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
@@ -9,24 +9,24 @@ mixin news-card(data)
         +el({
             tag: 'a',
             href: 'news-item.html',
-            class: 'news-card__image-wrap',
+            class: 'news-item__image-wrap',
         })
-            img.news-card__image(src='./assets/upload/' + data.image, alt='')
-        .news-card__content
+            img.news-item__image(src='./assets/upload/' + data.image, alt='')
+        .news-item__content
             +date({
-                mix: 'news-card__date',
+                mix: 'news-item__date',
                 date: data.date,
             })
             +heading({
                 tag: 'h3',
-                mix: 'news-card__heading',
+                mix: 'news-item__heading',
                 heading: data.heading,
                 link: true,
-                href: 'news-item.html'
+                href: 'news-view.html'
             })
             +el({
                 tag: 'p',
-                class: 'news-card__text',
+                class: 'news-item__text',
                 text: data.text,
             })
                 block

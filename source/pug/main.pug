@@ -4,58 +4,6 @@ block vars
     - var pageTitle = 'Техальянс'
     - var main = true
     - var pageId = 1
-    -
-        var brends = [
-            {
-                image: 'umg.jpg',
-                mod: '',
-            }, {
-                image: 'sunward.png',
-                mod: 'shift-top',
-            },{
-                image: 'xcmg.png',
-                mod: 'shift-top',
-            },{
-                image: 'dieci.png',
-                mod: '',
-            },{
-                image: 'liugong.jpg',
-                mod: '',
-            },{
-                image: 'disd.jpg',
-                mod: '',
-            },{
-                image: 'doosan.jpg',
-                mod: 'lg',
-            },{
-                image: 'felix.png',
-                mod: '',
-            }, {
-                image: 'umg.jpg',
-                mod: '',
-            }, {
-                image: 'sunward.png',
-                mod: 'shift-top',
-            },{
-                image: 'xcmg.png',
-                mod: 'shift-top',
-            },{
-                image: 'dieci.png',
-                mod: '',
-            },{
-                image: 'liugong.jpg',
-                mod: '',
-            },{
-                image: 'disd.jpg',
-                mod: '',
-            },{
-                image: 'doosan.jpg',
-                mod: 'lg',
-            },{
-                image: 'felix.png',
-                mod: '',
-            }
-        ]
 
 block content
     main
@@ -66,7 +14,9 @@ block content
         +main-section({
             heading: 'Официальный дистрибьютер брендов',
         })
-            +slider-brends({})
+            +slider-brends({
+                items: brendsMain
+            })
         +main-section({
             heading: 'Большой ассортимент техники',
             subheading: 'под любую вашу задачу',
@@ -84,4 +34,12 @@ block content
             mod: ['features'],
         })
             +features({})
-        +recommend({})
+        +reference({
+            number: true,
+            mod: 'recomendation',
+            form: {
+              heading: 'Заполните форму и получите бесплатно статью',
+              subheading: '"10 причин выбирать технику Дусан"',
+              submit: 'Получить рекомендации',
+            }
+        })
