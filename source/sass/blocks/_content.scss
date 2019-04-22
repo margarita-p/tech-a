@@ -1,6 +1,10 @@
 .content {
   padding-top: 35px;
   padding-bottom: 60px;
+
+  &--no-bottom-space {
+    padding-bottom: 0 !important;
+  }
 }
 
 .content__wrap {
@@ -12,11 +16,28 @@
   margin-bottom: 25px;
 }
 
+.content__heading {
+  position: relative;
+  padding-left: 20px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 4px;
+    background-color: color(primary);
+  }
+}
+
 .content__with-aside,
 .content__brends,
 .content__aside,
 .content__assortiment,
-.content__reference {
+.content__reference,
+.content__view {
   margin-bottom: 30px;
 }
 
@@ -43,6 +64,16 @@
   margin-bottom: 40px;
 }
 
+.content__view {
+  &--last {
+    margin-bottom: 0 !important;
+  }
+}
+
+.content__contacts {
+  margin-bottom: 50px;
+}
+
 @include respond-to(medium) {
   .content {
     padding-top: 45px;
@@ -51,13 +82,22 @@
 
   .content__with-aside,
   .content__brends,
-  .content__assortiment {
+  .content__assortiment,
+  .content__view {
     margin-bottom: 40px;
   }
 
   .content__breadcrumbs {
     margin-top: -20px;
     margin-bottom: 40px;
+  }
+
+  .content__heading {
+    padding-left: 25px;
+
+    &::before {
+      width: 5px;
+    }
   }
 
   .content__goods-list {
@@ -87,11 +127,17 @@
   .content__reference {
     margin-bottom: 60px;
   }
+
+  .content__contacts {
+    margin-bottom: 70px;
+  }
 }
 
 @include respond-to(medium-lg) {
   .content__with-aside {
-    display: flex;
+    .content__wrap {
+      display: flex;
+    }
   }
 
   .content__aside {
@@ -119,6 +165,10 @@
       margin-right: 30px;
     }
   }
+
+  .content__contacts {
+    margin-bottom: 80px;
+  }
 }
 
 @include respond-to(large) {
@@ -130,6 +180,14 @@
   .content__breadcrumbs {
     margin-top: -30px;
     margin-bottom: 60px;
+  }
+
+  .content__heading {
+    padding-left: 28px;
+
+    &::before {
+      width: 6px;
+    }
   }
 
   .content__pagination {
@@ -164,5 +222,13 @@
 
   .content__reference {
     margin-bottom: 90px;
+  }
+
+  .content__view {
+    margin-bottom: 50px;
+  }
+
+  .content__contacts {
+    margin-bottom: 120px;
   }
 }

@@ -5,10 +5,11 @@ block vars
     - var pageId = 9
 
 block content
-    main.content
+    main.content.content--no-bottom-space
         .content__wrap
-            h1 Контакты
+            h1.content__heading Контакты
             +panel-with-tabs({
+                mix: 'content__contacts',
                 tabs: ['Город Уфа', 'Город Краснодар']
             })
                 append content1
@@ -21,3 +22,12 @@ block content
                         mix: 'panel-with-tabs__shedule',
                         items: shedule2
                     })
+        +reference({
+            map: true,
+            mod: 'map',
+            form: {
+              heading: 'Оставьте заявку на звонок,',
+              subheading: 'чтобы мы связались с Вами в ближайшее время',
+              submit: 'Перезвоните нам',
+            }
+        })

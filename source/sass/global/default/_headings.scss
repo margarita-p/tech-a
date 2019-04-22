@@ -38,20 +38,9 @@ $heading-styles: (
   }
 }
 
-h1 {
-  position: relative;
-  padding-left: 20px;
+h1,
+h2 {
   text-transform: uppercase;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6px;
-    bottom: 6px;
-    width: 4px;
-    background-color: color(primary);
-  }
 }
 
 @include respond-to(medium) {
@@ -61,14 +50,6 @@ h1 {
       font-size: get($heading-styles, medium, h#{$i}, fs);
     }
   }
-
-  h1 {
-    padding-left: 25px;
-
-    &::before {
-      width: 5px;
-    }
-  }
 }
 
 @include respond-to(large) {
@@ -76,14 +57,6 @@ h1 {
     h#{$i} {
       margin-bottom: get($heading-styles, large, h#{$i}, mb);
       font-size: get($heading-styles, large, h#{$i}, fs);
-    }
-  }
-
-  h1 {
-    padding-left: 28px;
-
-    &::before {
-      width: 6px;
     }
   }
 }

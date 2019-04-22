@@ -9,41 +9,61 @@ mixin reference(data)
         .reference__wrap
             .reference__row
                 .reference__col.reference__col--left
-                    +el({
-                        class: 'reference__text-top',
-                    })
-                        if data.number
-                            | Получите от компании полезные рекомендации <span>по&nbsp;выбору техники</span>
-                        if data.callback
-                            | Чтобы узнать любую <span>подробную информацию,</span>
-                    +el({
-                        class: 'reference__text-bottom',
-                    })
-                        if data.number
-                            span.reference__number 10
-                            span.reference__number-descr
-                                | причин
-                                br
-                                span.text-primary
-                                    | покупать&nbsp;технику
-                                br
-                                | Doosan
-                        if data.callback
-                            span.reference__descr.reference__descr--large Звоните в отдел продаж
-                            +el({
-                                tag: 'a',
-                                href: 'tel:88005114480',
-                                text: '8 <span class="text-primary">(800)</span> 511-44-80',
-                                class: 'reference__phone'
-                            })
+                    if !data.map
                         +el({
-                            tag: 'svg',
-                            class: 'reference__arrow',
-                            icon: 'arrow-lg',
+                            class: 'reference__text-top',
+                            mix: 'wow fadeInUp',
                         })
+                            if data.number
+                                | Получите от компании полезные рекомендации <span class="text-primary">по&nbsp;выбору техники</span>
+                            if data.callback
+                                | Чтобы узнать любую <span class="text-primary">подробную информацию,</span>
+                            if data.lizing
+                                | Развивайте свой бизнес быстро и&nbsp;просто с&nbsp;<span class="text-primary">«Элемент Лизинг»!</span>
+                        +el({
+                            class: 'reference__text-bottom',
+                            mix: 'wow fadeInUp'
+                        })(data-wow-delay='0.2s')
+                            if data.number
+                                span.reference__number 10
+                                span.reference__number-descr
+                                    | причин
+                                    br
+                                    span.text-primary
+                                        | покупать&nbsp;технику
+                                    br
+                                    | Doosan
+                            if data.callback
+                                span.reference__descr.reference__descr--large Звоните в отдел продаж
+                                +el({
+                                    tag: 'a',
+                                    href: 'tel:88005114480',
+                                    text: '8 <span class="text-primary">(800)</span> 511-44-80',
+                                    class: 'reference__phone'
+                                })
+                            if data.lizing
+                                span.reference__descr Нет времени звонить? <br>Оставьте заявку на обратный звонок <br>и&nbsp;мысвяжемся с&nbsp;вами сами!
+                                +el({
+                                    tag: 'a',
+                                    href: 'tel:+74959372780',
+                                    text: '+7 <span class="text-primary">(495)</span> 937-27-80',
+                                    class: 'reference__phone'
+                                })
+                                +el({
+                                    tag: 'a',
+                                    href: 'tel:+73472464740',
+                                    text: '+7 <span class="text-primary">(347)</span> 246-47-40',
+                                    class: 'reference__phone'
+                                })
+                            +el({
+                                tag: 'svg',
+                                class: 'reference__arrow',
+                                mix: 'wow fadeInUp',
+                                icon: 'arrow-lg',
+                            })(data-wow-delay='0.4s')
                 .reference__col.reference__col--right
                     +form-card({
-                        mix: 'reference__form-card',
+                        mix: 'reference__form-card wow fadeInUp',
                         heading: data.form.heading,
                         subheading: data.form.subheading
                     })

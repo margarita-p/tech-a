@@ -1,0 +1,150 @@
+mixin lizing(data)
+    +el({
+        class: 'lizing',
+        mix: data.mix,
+        mod: data.mod,
+        js: 'tabs',
+    })&attributes(attributes)
+        .lizing__wrap
+            +tabs({
+                mix: 'lizing__tabs',
+                items: ['Элемент Лизинг', 'Элемент Лизинг 1', 'Элемент Лизинг 2']
+            })
+        .tab-1.js-tabs-content.active
+            .lizing__wrap
+                .lizing__top
+                    +el({
+                        tag: 'a',
+                        class: 'lizing__logo',
+                        target: '_blank',
+                    })(rel="nofollow noopener")
+                        +el({
+                            tag: 'img',
+                            width: '233',
+                            image: 'el-lizing-logo.png',
+                            class: 'lizing__logo-image'
+                        })
+                    .lizing__slogan
+                        | Начните использовать в&nbsp;своём бизнесе нужную спецтехнику уже сегодня!
+                .lizing__middle
+                    h3.lizing__title Это просто:
+                    +process({
+                        items: [
+                            'Выберите на этом сайте нужную вашему бизнесу технику.',
+                            'Получите в «Элемент Лизинг» оптимальные для вас условия лизинга.',
+                            'Соберите упрощенный пакет документов и получите быстрое решение по сделке.',
+                            'Подпишите договоры и&nbsp;оплатите аванс.',
+                            'Получите выбранную технику в&nbsp;лизинг для использования в&nbsp;вашем бизнесе.',
+                        ]
+                    })
+            .lizing__bottom
+                .lizing__wrap
+                    h3.lizing__title Условия лизинга:
+                    .lizing__row
+                        .lizing__left
+                            ul.lizing__conditions-list
+                                li.lizing__conditions-item Аванс от 15%
+                                li.lizing__conditions-item Срок лизинга&nbsp;&mdash; 12-36 мес.
+                                li.lizing__conditions-item Графики платежей&nbsp;&mdash; равный, дегрессия, убывающий.
+                        .lizing__right
+                            p.lizing__text.
+                                &laquo;Элемент Лизинг&raquo; дает вам возможность получить спецтехнику для бизнеса
+                                в&nbsp;лизинг с&nbsp;экономией времени и&nbsp;оборотных средств на&nbsp;максимально
+                                выгодных условиях. С&nbsp;2004 года специализируется на&nbsp;лизинге коммерческих
+                                автомобилей и&nbsp;спецтехники, входит в&nbsp;ТОП-30 крупнейших лизинговых компаний России.
+                            p.lizing__text.
+                                Участник государственных программ поддержки предпринимателей и&nbsp;автомобильной отрасли.
+                                Более 34&nbsp;тыс. предпринимателей разных форм собственности и&nbsp;сфер деятельности
+                                уже получили технику в&nbsp;лизинг через &laquo;Элемент Лизинг&raquo;.
+        .tab-2.js-tabs-content
+            .lizing__wrap
+                .lizing__top
+                    +el({
+                        tag: 'a',
+                        class: 'lizing__logo',
+                        target: '_blank',
+                    })(rel="nofollow noopener")
+                        +el({
+                            tag: 'img',
+                            width: '233',
+                            image: 'el-lizing-logo.png',
+                            class: 'lizing__logo-image'
+                        })
+                    .lizing__slogan
+                        | Начните использовать в&nbsp;своём бизнесе нужную спецтехнику уже сегодня!
+                .lizing__middle
+                    h3.lizing__title Это просто:
+                    +process({
+                        items: [
+                            'Выберите на этом сайте нужную вашему бизнесу технику.',
+                            'Получите в «Элемент Лизинг» оптимальные для вас условия лизинга.',
+                            'Соберите упрощенный пакет документов и получите быстрое решение по сделке.',
+                            'Подпишите договоры и&nbsp;оплатите аванс.',
+                            'Получите выбранную технику в&nbsp;лизинг для использования в&nbsp;вашем бизнесе.',
+                        ]
+                    })
+            .lizing__bottom
+                .lizing__wrap
+                    h3.lizing__title Условия лизинга:
+                    .lizing__row
+                        .lizing__left
+                            ul.lizing__conditions-list
+                                li.lizing__conditions-item Аванс от 15%
+                                li.lizing__conditions-item Срок лизинга&nbsp;&mdash; 12-36 мес.
+                                li.lizing__conditions-item Графики платежей&nbsp;&mdash; равный, дегрессия, убывающий.
+                        .lizing__right
+                            p.lizing__text.
+                                &laquo;Элемент Лизинг&raquo; дает вам возможность получить спецтехнику для бизнеса
+                                в&nbsp;лизинг с&nbsp;экономией времени и&nbsp;оборотных средств на&nbsp;максимально
+                                выгодных условиях. С&nbsp;2004 года специализируется на&nbsp;лизинге коммерческих
+                                автомобилей и&nbsp;спецтехники, входит в&nbsp;ТОП-30 крупнейших лизинговых компаний России.
+                            p.lizing__text.
+                                Участник государственных программ поддержки предпринимателей и&nbsp;автомобильной отрасли.
+                                Более 34&nbsp;тыс. предпринимателей разных форм собственности и&nbsp;сфер деятельности
+                                уже получили технику в&nbsp;лизинг через &laquo;Элемент Лизинг&raquo;.
+        .tab-3.js-tabs-content
+            .lizing__wrap
+                .lizing__top
+                    +el({
+                        tag: 'a',
+                        class: 'lizing__logo',
+                        target: '_blank',
+                    })(rel="nofollow noopener")
+                        +el({
+                            tag: 'img',
+                            width: '233',
+                            image: 'el-lizing-logo.png',
+                            class: 'lizing__logo-image'
+                        })
+                    .lizing__slogan
+                        | Начните использовать в&nbsp;своём бизнесе нужную спецтехнику уже сегодня!
+                .lizing__middle
+                    h3.lizing__title Это просто:
+                    +process({
+                        items: [
+                            'Выберите на этом сайте нужную вашему бизнесу технику.',
+                            'Получите в «Элемент Лизинг» оптимальные для вас условия лизинга.',
+                            'Соберите упрощенный пакет документов и получите быстрое решение по сделке.',
+                            'Подпишите договоры и&nbsp;оплатите аванс.',
+                            'Получите выбранную технику в&nbsp;лизинг для использования в&nbsp;вашем бизнесе.',
+                        ]
+                    })
+            .lizing__bottom
+                .lizing__wrap
+                    h3.lizing__title Условия лизинга:
+                    .lizing__row
+                        .lizing__left
+                            ul.lizing__conditions-list
+                                li.lizing__conditions-item Аванс от 15%
+                                li.lizing__conditions-item Срок лизинга&nbsp;&mdash; 12-36 мес.
+                                li.lizing__conditions-item Графики платежей&nbsp;&mdash; равный, дегрессия, убывающий.
+                        .lizing__right
+                            p.lizing__text.
+                                &laquo;Элемент Лизинг&raquo; дает вам возможность получить спецтехнику для бизнеса
+                                в&nbsp;лизинг с&nbsp;экономией времени и&nbsp;оборотных средств на&nbsp;максимально
+                                выгодных условиях. С&nbsp;2004 года специализируется на&nbsp;лизинге коммерческих
+                                автомобилей и&nbsp;спецтехники, входит в&nbsp;ТОП-30 крупнейших лизинговых компаний России.
+                            p.lizing__text.
+                                Участник государственных программ поддержки предпринимателей и&nbsp;автомобильной отрасли.
+                                Более 34&nbsp;тыс. предпринимателей разных форм собственности и&nbsp;сфер деятельности
+                                уже получили технику в&nbsp;лизинг через &laquo;Элемент Лизинг&raquo;.

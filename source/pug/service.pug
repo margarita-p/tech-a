@@ -11,7 +11,7 @@ block content
                 mix: 'content__breadcrumbs',
                 items: ['Главная','Новости', 'Открытие нового завода спех. техники в Москве']
             })
-            h1 Сервис
+            h1.content__heading Сервис
             article.article
                 p
                     img(src='./assets/upload/news-item01.jpg', width='1140' alt='')
@@ -55,6 +55,7 @@ block content
             .content__button-bottom-wrap
                 +button({
                     tag: 'a',
+                    href: 'news.html',
                     mix: 'content__button-bottom',
                     text: 'Все новости',
                     mod: ['border-primary', 'large'],

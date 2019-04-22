@@ -7,8 +7,8 @@ block vars
 block content
     main.content
         .content__wrap
-            h1 Отзывы
-            +reviews-list({
+            h1.content__heading Отзывы
+            +reviews({
                 items: reviews,
             })
             +pagination({

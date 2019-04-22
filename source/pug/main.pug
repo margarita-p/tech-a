@@ -8,15 +8,16 @@ block vars
 block content
     main
         +intro({})
-        +goods-list({
+        +goods({
             mix: 'content__goods-list'
         })
         +main-section({
             heading: 'Официальный дистрибьютер брендов',
         })
             +slider-brends({
-                items: brendsMain
-            })
+                items: brendsMain,
+                mix: 'wow fadeInUp',
+            })(data-wow-delay='0.2s')
         +main-section({
             heading: 'Большой ассортимент техники',
             subheading: 'под любую вашу задачу',
@@ -28,7 +29,9 @@ block content
             subheading: 'подтверждается доверием крупнейших компаний страны',
             mod: 'slider-company',
         })
-            +slider-company({})
+            +slider-company({
+                mix: 'wow fadeInUp',
+            })
         +main-section({
             heading: 'Наши преимущества',
             mod: ['features'],

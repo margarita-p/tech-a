@@ -24,4 +24,5 @@
       document.querySelector("." + atr).classList.add('active');
     });
   }
+
 })();

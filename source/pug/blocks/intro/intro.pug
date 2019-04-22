@@ -10,16 +10,16 @@ mixin intro(data)
             .intro__heading-wrap
                 +el({
                     tag: 'h1',
-                    mix: 'intro__heading',
+                    mix: 'intro__heading wow fadeInUp',
                     text: 'Надежная спецтехника для&nbsp;успешного строительства'
                 })
                 +el({
                     tag: 'p',
-                    mix: 'intro__subheading',
+                    mix: 'intro__subheading wow fadeInUp',
                     text: '<span class="lg">Крупнейший поставщик техники</span> <br>DOOSAN, DIECI, SUNWARD, UMG, LIUGONG, МЕРКАТОР <span class="sm">более 10&nbsp;лет</span>'
-                })(style="text-transform: uppercase;")
+                })(style="text-transform: uppercase;", data-wow-delay= "0.2s")
             +button({
-                mix: 'intro__btn',
+                mix: 'intro__btn wow fadeInUp',
                 mod: ['bg-primary', 'large'],
                 text: 'Скачать прайс',
-            })
+            })(data-wow-delay= "0.4s")

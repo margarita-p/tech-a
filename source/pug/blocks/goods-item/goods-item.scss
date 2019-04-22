@@ -44,6 +44,7 @@
       transform: translate(-50%, -100%);
       border: 12px solid transparent;
       border-bottom: 12px solid color(primary);
+      transition: opacity duration(md) func(primary);
     }
 
     @include hover {
@@ -63,7 +64,7 @@
 
 @include respond-to(large) {
   .goods-item {
-    padding: 30px 5px;
+    padding: 30px 10px;
     padding-bottom: 26px;
   }
 

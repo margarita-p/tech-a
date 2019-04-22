@@ -26,6 +26,7 @@ mixin button(data)
             before: data.before,
             after: data.after,
             target: data.target,
+            href: data.href,
         })&attributes(attributes)
             if data.icon
                 +el({

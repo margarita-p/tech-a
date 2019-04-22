@@ -47,12 +47,13 @@ mixin features(data)
         mix: data.mix,
         js: data.js,
     })&attributes(attributes)
-        each item in features
+        each item, index in features
             +el({
                 tag: 'li',
                 class: 'features__item',
-                mod: item.mod
-            })
+                mod: item.mod,
+                mix: 'wow fadeInUp',
+            })(data-wow-delay=0.2 + index * 0.2 + "s")
                 +features-item({
                     heading: item.heading,
                     text: item.text,

@@ -8,7 +8,7 @@ mixin panel-with-tabs(data)
         +el({
             tag: 'ul',
             class: 'panel-with-tabs__list',
-        })&attributes(attributes)
+        })
             each item, index in data.tabs
                 +el({
                     tag: 'li',

@@ -1,0 +1,14 @@
+mixin process(data)
+    +el({
+        tag: 'ol',
+        class: 'process',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each item, index in data.items
+            +el({
+                tag: 'li',
+                class: 'process__item',
+                text: item,
+            })

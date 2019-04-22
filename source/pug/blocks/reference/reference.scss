@@ -14,6 +14,28 @@
     .reference__text-top {
       margin-bottom: 25px;
     }
+
+    .reference__descr {
+      margin-bottom: 0;
+    }
+  }
+
+  &--map {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-image: url('../assets/images/bg-map.jpg');
+
+    &::after {
+      opacity: 0.5;
+    }
+
+    .reference__form-card  {
+      background-color: color(light);
+
+      .field__input {
+        background-color: color(white);
+      }
+    }
   }
 }
 
@@ -95,6 +117,7 @@
 }
 
 .reference__descr {
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 18px;
 
@@ -108,6 +131,7 @@
   font-family: font(primary);
   font-weight: 700;
   font-size: 29px;
+  line-height: 1.2;
   text-decoration: none;
 }
 
@@ -133,6 +157,12 @@
         margin-left: 280px;
       }
     }
+
+    &--lizing {
+      .reference__arrow {
+        display: none;
+      }
+    }
   }
 
   .reference__row {
@@ -155,7 +185,7 @@
   }
 
   .reference__text-top {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .reference__text-bottom {
@@ -172,15 +202,15 @@
   }
 
   .reference__descr {
-    font-size: 22px;
+    font-size: 20px;
 
     &--large {
-      font-size: 26px;
+      font-size: 24px;
     }
   }
 
   .reference__phone {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .reference__arrow {
@@ -238,7 +268,7 @@
   }
 
   .reference__phone {
-    font-size: 50px;
+    font-size: 44px;
   }
 
   .reference__arrow {
@@ -259,11 +289,17 @@
 
     &--callback {
       .reference__text-top {
-        margin-bottom: 55px;
+        margin-bottom: 50px;
       }
 
       .reference__arrow {
         margin-left: 380px;
+      }
+    }
+
+    &--lizing {
+      .reference__text-top {
+        margin-bottom: 25px;
       }
     }
   }

@@ -1,0 +1,28 @@
+mixin view-2(data)
+    +el({
+        tag: 'section',
+        class: 'view-2',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .view-2__wrap
+            .view-2__inner
+                .view-2__image-content.wow.fadeInLeft
+                    +el({
+                        tag: 'picture',
+                        class: 'view-2__picture',
+                    })
+                        source(media="(min-width: 768px)" srcset='./assets/images/' + data.picture.large + '@1x.webp 1x, ./assets/images/' + data.picture.large + '@2x.webp 2x' type='image/webp')
+                        source(media="(min-width: 768px)" srcset='./assets/images/' + data.picture.large + '@1x.' + data.exp + ' 1x, ./assets/images/' + data.picture.large + '@2x.' + data.exp + ' 2x')
+                        source(media="(min-width: 420px)" srcset='./assets/images/' + data.picture.medium + '@1x.webp 1x, ./assets/images/' + data.picture.medium + '@2x.webp 2x' type='image/webp')
+                        source(media="(min-width: 420px)" srcset='./assets/images/' + data.picture.medium + '@1x.' + data.exp + ' 1x, ./assets/images/' + data.picture.medium + '@2x.' + data.exp + ' 2x')
+                        source(srcset='./assets/images/' + data.picture.small + '@1x.webp 1x, ./assets/images/' + data.picture.small + '@2x.webp 2x' type='image/webp')
+                        img(src='./assets/images/' + data.picture.small + '@1x.' + data.exp srcset='./assets/images/' + data.picture.small + '@2x.' + data.exp + ' 2x' alt=data.alt ? data.alt : '')
+                .view-2__text-content.wow.fadeInLeft(data-wow-delay='0.2s')
+                    +el({
+                        tag: 'h2',
+                        class: 'view-2__heading',
+                        text: data.heading
+                    })
+                    block

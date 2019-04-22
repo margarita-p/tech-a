@@ -7,7 +7,7 @@ mixin main-nav(data)
         tag: 'ul',
         class: className,
         mod: data.mod,
-        mix: data.mix
+        mix: data.mix,
     })&attributes(attributes)
         if data.line
             +el({

@@ -2,8 +2,8 @@
 
 (function() {
 
-  var block = document.querySelector('.header__main-nav-block');
-  var btn = document.querySelector('.header__btn-nav');
+  var block = document.querySelector('.js-main-nav');
+  var btn = document.querySelector('.js-button-nav');
   var ESC = 27;
 
   var toggle = function() {

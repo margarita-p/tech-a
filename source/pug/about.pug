@@ -1,0 +1,130 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Техальянс'
+    - var pageId = 1
+
+block content
+    main.content
+        .content__wrap
+            h1.content__heading О компании
+        +view-1({
+            mix: 'content__view',
+            heading: 'Oфициальный дилер Doosan, Dieci, Sunward, UMG, Liugong, Меркатор',
+            picture: {
+                small: 'view01-360x308',
+                medium: 'view01-708x370',
+                large: 'view01-423x400',
+                exp: 'jpg',
+            }
+        })
+            p Мы предлагаем полный модельный ряд строительной техники DOOSAN, DIECI, SUNWARD, UMG, LIUGONG, МЕРКАТОР, а также услуги по обслуживанию, ремонту и поставке запасных частей.
+            p Наш сервис соответствует стандартам качества официального дилера.
+
+        +view-2({
+            mix: 'content__view',
+            mod: 'left',
+            heading: 'Дилерский центр',
+            picture: {
+                small: 'view02-360x308',
+                medium: 'view02-708x370',
+                large: 'view02-544x468',
+                exp: 'jpg',
+            }
+        })
+            p
+                | В дилерском центре вы можете ознакомиться с техникой, протестировать модель, которая вам понравилась, выбрать выгодный вариант приобретения. Наши специалисты предоставят вам информацию о комплектациях и ценах, расскажут об особых предложениях, акциях и скидках.
+        +view-2({
+            mix: 'content__view',
+            mod: 'right',
+            heading: 'Полный модельный ряд',
+            picture: {
+                small: 'view03-360x308',
+                medium: 'view03-708x370',
+                large: 'view03-544x468',
+                exp: 'jpg',
+            }
+        })
+            p
+                | В дилерском центре вы можете ознакомиться с техникой, протестировать модель, которая вам понравилась, выбрать выгодный вариант приобретения. Наши специалисты предоставят вам информацию о комплектациях и ценах, расскажут об особых предложениях, акциях и скидках.
+        +view-2({
+            mix: 'content__view',
+            mod: 'left',
+            heading: 'Выгодная покупка',
+            picture: {
+                small: 'view04-360x308',
+                medium: 'view04-708x370',
+                large: 'view04-544x468',
+                exp: 'jpg',
+            }
+        })
+            p
+                | Вы можете приобрести технику у официального дилера Техальянс в лизинг. Или совершить обмен своей старой техники по программе Trade In. Ознакомиться с условиями программы, суммами выплат за технику с пробегом вы можете непосредственно в нашем центре в Уфе.
+        +view-2({
+            mix: 'content__view content__view--last',
+            mod: 'right',
+            heading: 'Технические обслуживание',
+            picture: {
+                small: 'view05-360x308',
+                medium: 'view05-708x370',
+                large: 'view05-544x468',
+                exp: 'jpg',
+            }
+        })
+            p
+                | Наша компания не только занимается продажей техники, но и предоставляет своим клиентам полный цикл технического обслуживания и ремонта строительной техники. Мы используем в ремонте только оригинальные запасные части, поэтому гарантируем безотказную работу вашей строительной техники.
+
+        +main-section({
+            heading: 'Наши преимущества',
+            mod: ['features'],
+        })
+            +features({})
+        +reference({
+            mix: 'content__reference',
+            callback: true,
+            mod: 'callback',
+            form: {
+              heading: 'Оставьте заявку на звонок,',
+              subheading: 'чтобы мы связались с Вами в ближайшее время',
+              submit: 'Перезвоните нам',
+            }
+        })
+        .content__wrap
+            .js-show-more.wow.fadeInUp
+                p.js-show-more-item-2.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum Lorem ipsum dolor sit amet
+                p.js-show-more-item-2.
+                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum
+                p.js-show-more-item-2.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum Lorem ipsum dolor sit amet
+                p.js-show-more-item-2.
+                    Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum
+
+                .content__button-bottom-wrap
+                    +button({
+                        tag: 'a',
+                        mix: 'content__button-bottom wow fadeInUp',
+                        text: 'Смотреть больше',
+                        mod: ['border-primary', 'large'],
+                        js: 'show-more-button',
+                    })(data-wow-delay='0.2s')

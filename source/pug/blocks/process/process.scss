@@ -1,0 +1,70 @@
+.process {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: list;
+}
+
+.process__item {
+  position: relative;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 16px;
+
+  &::before {
+    display: block;
+    margin-bottom: 5px;
+    counter-increment: list;
+    content: "0" counter(list);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    color: color(primary);
+  }
+
+  &:nth-child(n + 10) {
+    &::before {
+      content: counter(list);
+    }
+  }
+}
+
+@include respond-to(small-lg) {
+  .process {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  .process__item {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+
+@include respond-to(medium) {
+  .process__item {
+    width: 33.33%;
+
+    &::before {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+  }
+}
+
+@include respond-to(medium-lg) {
+  .process__item {
+    width: 20%;
+  }
+}
+
+@include respond-to(large) {
+  .process__item {
+
+    &::before {
+      margin-bottom: 15px;
+      font-size: 36px;
+    }
+  }
+}

@@ -1,10 +1,10 @@
-include ./templates/head.pug
+extends ./templates/template
 
-doctype html
-html(lang="ru-RU")
-    +head()
+block vars
+    - var pageTitle = 'Техальянс'
 
-    .content.content--regular
+block content
+    main.content.content--regular
       .content__wrap
         ul
             li
@@ -14,9 +14,9 @@ html(lang="ru-RU")
             li
                 a(href="reviews.html") Отзывы
             li
-                a(href="news-list.html") Новости
+                a(href="news.html") Новости
             li
-                a(href="news-item.html") Новость
+                a(href="news-view.html") Новость
             li
                 a(href="service.html") Сервис
             li
@@ -27,3 +27,7 @@ html(lang="ru-RU")
                 a(href="vacancy.html") Вакансии
             li
                 a(href="contacts.html") Контакты
+            li
+                a(href="about.html") О компании
+            li
+                a(href="lizing.html") Лизинг

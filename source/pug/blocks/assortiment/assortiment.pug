@@ -6,11 +6,12 @@ mixin assortiment(data)
         mix: data.mix,
         js: data.js,
     })&attributes(attributes)
-        each item in assortiment
+        each item, index in assortiment
             +el({
                 tag: 'li',
                 class: 'assortiment__item',
-            })
+                mix: 'wow fadeInUp'
+            })(data-wow-delay=0.4 + index * 0.2 + "s")
                 +assortiment-item({
                     heading: item.heading,
                     image: item.image,
