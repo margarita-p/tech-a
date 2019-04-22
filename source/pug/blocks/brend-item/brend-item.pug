@@ -1,11 +1,13 @@
 mixin brend-item(data)
     +el({
+        tag: 'a',
         class: 'brend-item',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
-        text: data.text
-    })&attributes(attributes)
+        text: data.text,
+        target: '_blank'
+    })(rel="nofollow noopener")
         +el({
             tag: 'img',
             class: 'brend-item__logo',

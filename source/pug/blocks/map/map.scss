@@ -1,0 +1,56 @@
+.map {
+  width: 100%;
+}
+
+.map__wrap {
+  @include wrapper;
+}
+
+.map__form-card {
+  margin-bottom: 20px;
+  background-color: color(light);
+
+  .field__input {
+    background-color: color(white);
+  }
+}
+
+.map__map {
+  height: 250px;
+  background-color: color(light);
+}
+
+@include respond-to(medium) {
+  .map {
+    position: relative;
+  }
+
+  .map__wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .map__map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    right: 0;
+    height: auto;
+
+    @include mask(rgba(#000, 0.5));
+  }
+
+  .map__form-card {
+    width: 50%;
+    max-width: 555px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+}
+
+@include respond-to(large) {
+  .map__map {
+    left: -350px;
+  }
+}

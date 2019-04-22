@@ -19,24 +19,6 @@
       margin-bottom: 0;
     }
   }
-
-  &--map {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    background-image: url('../assets/images/bg-map.jpg');
-
-    &::after {
-      opacity: 0.5;
-    }
-
-    .reference__form-card  {
-      background-color: color(light);
-
-      .field__input {
-        background-color: color(white);
-      }
-    }
-  }
 }
 
 .reference__wrap {

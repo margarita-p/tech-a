@@ -1,0 +1,56 @@
+mixin map(data)
+    +el({
+        class: 'map',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        .map__wrap
+            +form-card({
+                mix: 'map__form-card wow fadeInUp',
+                heading: 'Оставьте заявку на звонок,',
+                subheading: 'чтобы мы связались с Вами в ближайшее время'
+            })
+                +form({
+                    group: [
+                        {
+                            firstName: true,
+                            tel: true,
+                            modGroup: 'row',
+                        },
+                        {
+                            email: true,
+                            modGroup: 'last',
+                        }
+                    ],
+                    confirm: true,
+                    submit: 'Перезвоните нам'
+                })
+        .map__map#map
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+            script.
+                ymaps.ready(function () {
+                  var map = new ymaps.Map('map', {
+                    center: [54.786944, 56.121160],
+                    zoom: 16,
+                    scrollZoom: false,
+                    controls: []
+                  }, {
+                    searchControlProvider: 'yandex#search'
+                  }),
+                  Placemark = new ymaps.Placemark([54.786944, 56.121160], {
+                    balloonContent: 'г. Уфа, ул. Сельская Богородская, д. 51, оф. 308'
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [30, 30],
+                    iconImageOffset: [-15, -40],
+                  });
+
+                  map.geoObjects.add(Placemark);
+                  map.behaviors.disable('scrollZoom');
+                  map.controls.add('zoomControl');
+                  var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+                  map.controls.get('zoomControl').options.set('size', 'small');
+                });

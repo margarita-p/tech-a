@@ -10,6 +10,7 @@
 
   p {
     color: inherit;
+    line-height: 1.5;
 
     &:last-child {
       margin-bottom: 0;
@@ -145,7 +146,7 @@
 
   .footer__made {
     justify-content: flex-start;
-    margin-top: 30px;
+    margin-top: 26px;
   }
 }
 
@@ -163,7 +164,7 @@
   }
 
   .footer__title {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   .footer__company {
@@ -181,7 +182,7 @@
   }
 
   .footer__item {
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .footer__address,
@@ -190,7 +191,7 @@
   }
 
   .footer__address {
-    margin-bottom: 26px;
+    margin-bottom: 30px;
     padding-right: 0;
   }
 }

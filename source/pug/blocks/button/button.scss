@@ -1,6 +1,7 @@
 .button {
   display: block;
   flex-shrink: 0;
+  cursor: pointer;
 
   &--large,
   &--small,

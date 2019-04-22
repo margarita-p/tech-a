@@ -8,6 +8,7 @@
   padding: 20px;
   background-color: color(white);
   box-shadow: 2px 2px 7px 0px rgba(#000, 0.2);
+  text-decoration: none;
 
   &--shift-top {
     .brend-item__logo {
@@ -25,8 +26,4 @@
   max-height: 100%;
   max-width: 100%;
   text-align: center;
-}
-
-@include respond-to(580px) {
-
 }

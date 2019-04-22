@@ -9,6 +9,8 @@
       btns.on('click', function(e){
         e.preventDefault();
         $(this).parents('.js-show-more').find(items).toggleClass('active');
+        var text = $(this).text() === 'Скрыть' ? 'Смотреть больше' : 'Скрыть';
+        $(this).text(text);
       });
     }
 
