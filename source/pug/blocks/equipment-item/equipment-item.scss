@@ -6,15 +6,28 @@
 }
 
 .equipment-item__image-wrap {
+  position: relative;
   overflow: hidden;
   display: block;
   height: 67vw;
   background-color: color(light-gray);
   text-decoration: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(#000, 0.5);
+    opacity: 0;
+    transition: duration(md) func(primary);
+  }
+
   @include hover {
-    .equipment-item__image {
-      transform: scale(1.05);
+    &::after {
+      opacity: 1;
     }
   }
 }
@@ -24,7 +37,7 @@
   width: 100%;
   height: 100%;
   @include ofi(cover, center);
-  transition: duration(lg);
+
 }
 
 .equipment-item__content {
@@ -80,6 +93,8 @@
 
 .eqiupment__button {
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @include respond-to(small-lg) {

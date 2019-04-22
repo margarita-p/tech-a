@@ -10,14 +10,14 @@
   }
 
   &--large {
-    padding: 14px 40px;
+    padding: 12px 32px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
   }
 
   &--small {
-    padding: 12px 40px;
+    padding: 10px 24px;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -30,16 +30,30 @@
   }
 
   &:disabled,
-  &--bg-disabled {
+  &--bg-disabled,
+  &--border-disabled {
     pointer-events: none;
+    cursor: default;
+  }
+
+  &--bg-disabled {
+    border: 2px solid color(light-gray);
+    background-color: color(light-gray);
+    color: color(white);
   }
 
   &--bg-primary {
+    border: 2px solid color(primary);
     background-color: color(primary);
 
     @include hover {
       background-color: darken(color(primary), $change-color);
     }
+  }
+
+  &--border-disabled {
+    border: 2px solid color(light-gray);
+    color: color(light-gray);
   }
 
   &--border-primary {
@@ -53,7 +67,7 @@
   }
 
   &--large {
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 14px;
     text-transform: none;
   }
@@ -108,7 +122,7 @@
 @include respond-to(medium) {
   .button {
     &--large {
-      padding: 16px 30px;
+      padding: 14px 33px;
       font-size: 17px;
       line-height: 21px;
     }
@@ -122,7 +136,7 @@
 @include respond-to(large) {
   .button {
     &--large {
-      padding: 18px 35px;
+      padding: 16px 38px;
       font-size: 18px;
       line-height: 22px;
     }

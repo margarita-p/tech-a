@@ -12,7 +12,7 @@
     border-right-color: $color;
     transform: rotate($deg);
     transform-origin: center;
-    @content /* stylelint-disable-line */
+    @content
   }
 }
 

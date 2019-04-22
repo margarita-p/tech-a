@@ -1,7 +1,7 @@
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 14px;
+    margin-bottom: mb(lg) - 4px;
 }
 
 ul,
@@ -16,20 +16,21 @@ ol {
 @include respond-to(medium) {
   ul,
   ol {
-    margin-bottom: 15px;
+    margin-bottom: mb(lg) - 5px;
   }
 
-  ul,
-  ol {
-    li {
-      margin-bottom: 6px;
-    }
+  li {
+    margin-bottom: 5px;
   }
 }
 
 @include respond-to(large) {
   ul,
   ol {
-    margin-bottom: 16px;
+    margin-bottom: mb(lg) - 6px;
+  }
+
+  li {
+    margin-bottom: 6px;
   }
 }
