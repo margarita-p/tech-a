@@ -11,6 +11,8 @@
 
   &.active {
     order: 9999;
+    margin-bottom: 0;
+
     .panel-with-tabs__button {
       background-color: color(light);
     }
@@ -18,14 +20,11 @@
 }
 
 .panel-with-tabs__button {
+  display: block;
   width: 100%;
   padding: 12px 20px;
   background-color: #dfdfdc;
   text-align: left;
-
-  @include hover {
-
-  }
 }
 
 .panel-with-tabs__heading {

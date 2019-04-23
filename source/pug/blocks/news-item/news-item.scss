@@ -5,15 +5,28 @@
 }
 
 .news-item__image-wrap {
+  position: relative;
   overflow: hidden;
   display: block;
   height: 38vw;
   background-color: color(light-gray);
   text-decoration: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(#000, 0.5);
+    opacity: 0;
+    transition: duration(md) func(primary);
+  }
+
   @include hover {
-    .news-item__image {
-      transform: scale(1.05);
+    &::after {
+      opacity: 1;
     }
   }
 }
