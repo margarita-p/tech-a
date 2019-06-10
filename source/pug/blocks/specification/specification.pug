@@ -8,7 +8,6 @@ mixin specification(data)
     })&attributes(attributes)
         each item in data.items
             li.specification__item
-                //- | #{item.name} #{item.value}
                 +el({
                     class: 'specification__text-wrap',
                     mod: 'name',

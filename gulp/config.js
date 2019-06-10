@@ -10,7 +10,7 @@ const config = {
     html          : srcPath + '/html/',
     sass          : srcPath + '/sass/styles.scss',
     scripts       : srcPath + '/scripts/**/*.js',
-    images        : [srcPath + '/assets/images/**/*.*', srcPath + '/pug/blocks/**/images/*.*', srcPath + '/html/blocks/**/images/*.*'],
+    images        : [srcPath + '/assets/images/**/*.*', srcPath + '/assets/images/webp/**/*.*'],
     svg           : srcPath + '/assets/image',
     upload        : srcPath + '/assets/upload/**/*.*',
     spritePng     : srcPath + '/assets/sprites/png/**/*.png',

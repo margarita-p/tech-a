@@ -61,7 +61,6 @@
 
 @include respond-to(large) {
   .process__item {
-
     &::before {
       margin-bottom: 15px;
       font-size: 36px;
