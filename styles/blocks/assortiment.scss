@@ -1,0 +1,42 @@
+.assortiment {
+  margin: 0;
+  margin-right: - pads(small);
+  margin-left: - pads(small);
+  padding: 0;
+}
+
+.assortiment__item {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+@include respond-to(medium) {
+  .assortiment {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  .assortiment__item {
+    flex-grow: 1;
+    width: 25%;
+    min-height: 23vw;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@include respond-to(large) {
+  .assortiment {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .assortiment__item {
+    width: 25%;
+    min-height: 263px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+}

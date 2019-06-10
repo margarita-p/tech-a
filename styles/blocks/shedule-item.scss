@@ -1,0 +1,31 @@
+.shedule-item {
+  a {
+
+  }
+}
+
+
+.shedule-item__heading {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.shedule-item__icon {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  width: 17px;
+  height: 17px;
+  fill: color(black);
+}
+
+.shedule-item__text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}

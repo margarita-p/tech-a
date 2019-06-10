@@ -1,0 +1,165 @@
+.view-2__wrap {
+  @include wrapper;
+}
+
+.view-2__image-content {
+  background-color: color(light-gray);
+  height: 70vw;
+}
+
+.view-2__picture,
+.view-2__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
+}
+
+.view-2__text-content {
+  padding-top: 20px;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.view-2__heading {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+@include respond-to(420px) {
+  .view-2__image-content {
+    height: 300px;
+  }
+}
+
+@include respond-to(medium) {
+  .view-2 {
+    &--left {
+      .view-2__image-content {
+        order: 2;
+
+        &::before {
+          left: -10vw;
+        }
+      }
+
+      .view-2__text-content {
+        order: 1;
+        margin-right: -5vw;
+      }
+    }
+
+    &--right {
+      .view-2__image-content {
+        &::before {
+          left: 10vw;
+        }
+      }
+
+      .view-2__text-content {
+        margin-left: -5vw;
+      }
+    }
+  }
+
+  .view-2__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 5vw;
+  }
+
+  .view-2__image-content {
+    align-self: flex-start;
+    position: relative;
+    width: 50vw;
+    height: 43vw;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4vw;
+      z-index: -1;
+      width: 50vw;
+      height: 44vw;
+      background-color: color(light);
+    }
+  }
+
+  .view-2__text-content {
+    position: relative;
+    z-index: 1;
+    width: 60vw;
+    margin-top: auto;
+    padding: 4vw;
+    background-color: color(white);
+    box-shadow: 3px 3px 7px 0 rgba(#000, 0.25);
+  }
+
+  .view-2__heading {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .view-2 {
+    &--left {
+      .view-2__image-content {
+        &::before {
+          left: -100px;
+        }
+      }
+
+      .view-2__text-content {
+        margin-right: -60px;
+      }
+    }
+
+    &--right {
+      .view-2__image-content {
+        &::before {
+          left: 100px;
+        }
+      }
+
+      .view-2__text-content {
+        margin-left: -60px;
+      }
+    }
+  }
+
+  .view-2__inner {
+    padding-bottom: 60px;
+  }
+
+  .view-2__image-content {
+    width: 544px;
+    height: 466px;
+
+    &::before {
+      top: 35px;
+      left: 100px;
+      width: 544px;
+      height: 489px;
+    }
+  }
+
+  .view-2__text-content {
+    padding: 60px;
+    width: 656px;
+    min-height: 316px;
+  }
+
+  .view-2__heading {
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+}

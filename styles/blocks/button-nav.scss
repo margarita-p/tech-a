@@ -1,0 +1,138 @@
+$btn-nav-width: 40px;
+$btn-nav-height: 40px;
+$btn-nav-distanse: 8px;
+$btn-nav-thickness: 2px;
+$btn-nav-color: color(white);
+$btn-nav-color-active: color(black);
+
+.btn-nav {
+  width: $btn-nav-width;
+  height: $btn-nav-height;
+  padding: 8px;
+  background-color: #000;
+  box-shadow: 2px 2px 10px 0 rgba(#000, 0.1);
+  opacity: 0.6;
+
+  &.active {
+    box-shadow: none;
+
+    .btn-nav__icon-items {
+      background-color: transparent;
+
+      &::before {
+        animation-name: nav-before-open;
+      }
+
+      &::after {
+        animation-name: nav-after-open;
+      }
+    }
+  }
+
+  @include hover {
+    opacity: 1;
+  }
+}
+
+.btn-nav__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-nav__icon-items {
+  position: relative;
+  display: block;
+  top: calc(50% - #{$btn-nav-thickness / 2});
+  height: $btn-nav-thickness;
+  border-radius: $btn-nav-thickness / 2;
+  background-color: $btn-nav-color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: $btn-nav-thickness;
+    border-radius: $btn-nav-thickness / 2;
+    background-color: $btn-nav-color;
+    transform-origin: center;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &::before {
+    top: - $btn-nav-distanse;
+  }
+
+  &::after {
+    bottom: - $btn-nav-distanse;
+  }
+
+  &::before {
+    animation-name: nav-before-close;
+  }
+
+  &::after {
+    animation-name: nav-after-close;
+  }
+}
+
+@keyframes nav-before-close {
+  0% {
+    transform: translateY($btn-nav-distanse) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY($btn-nav-distanse / 2) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-after-close {
+  0% {
+    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(- $btn-nav-distanse / 2) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-before-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY($btn-nav-distanse / 2);
+  }
+
+  100% {
+    transform: translateY($btn-nav-distanse) rotate(45deg);
+  }
+}
+
+@keyframes nav-after-open {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(- $btn-nav-distanse / 2);
+  }
+
+  100% {
+    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+  }
+}

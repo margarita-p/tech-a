@@ -1,0 +1,33 @@
+.slider-brends {
+  position: relative;
+  padding: 0 50px;
+
+  .control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--prev {
+      left: -50px;
+    }
+
+    &--next {
+      right: -50px;
+    }
+  }
+}
+
+.slider-brends__list {
+  margin: -10px -10px;
+}
+
+.slider-brends__item {
+  padding: 10px 7px;
+  text-align: center;
+}
+
+@include respond-to(large) {
+  .slider-brends {
+    padding: 0;
+  }
+}

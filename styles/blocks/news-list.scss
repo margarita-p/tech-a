@@ -1,0 +1,41 @@
+.news-list {
+
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+}
+
+.news-list__item {
+  margin-bottom: 20px;
+  @include list-no;
+}
+
+@include respond-to(520px) {
+  .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .news-list__item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@include respond-to(920px) {
+  .news-list__item {
+    width: 33.33%;
+  }
+}
+
+@include respond-to(large) {
+  .news-list__item {
+    width: 25%;
+  }
+}

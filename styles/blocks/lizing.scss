@@ -1,0 +1,173 @@
+.lizing {
+
+}
+
+.lizing__wrap {
+  @include wrapper;
+}
+
+.lizing__tabs {
+  margin-bottom: 40px;
+}
+
+.lizing__top,
+.lizing__logo,
+.lizing__middle,
+.lizing__left {
+  margin-bottom: 20px;
+}
+
+.lizing__logo,
+.lizing__logo-image {
+  display: block;
+  width: 200px;
+  height: 75px;
+}
+
+.lizing__logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lizing__slogan {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lizing__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.lizing__bottom {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: color(light);
+}
+
+.lizing__conditions-list {
+  margin: 0;
+  padding: 0;
+}
+
+.lizing__conditions-item {
+  @include list-no;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.lizing__text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@include respond-to(small-lg) {
+  .lizing__top {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .lizing__logo {
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .lizing__slogan {
+    text-align: left;
+    max-width: 460px;
+  }
+}
+
+@include respond-to(medium) {
+  .lizing__logo {
+    margin-right: 40px;
+  }
+
+  .lizing__slogan {
+    font-size: 24px;
+  }
+
+  .lizing__title {
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
+
+  .lizing__bottom {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .lizing__conditions-item {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+
+  .lizing__row {
+    display: flex;
+  }
+
+  .lizing__left {
+    width: 40%;
+    margin-bottom: 0;
+    padding-right: 20px;
+  }
+
+  .lizing__right {
+    width: 60%;
+  }
+}
+
+@include respond-to(large) {
+  .lizing__top {
+    margin-bottom: 40px;
+  }
+
+  .lizing__logo {
+    margin-right: 45px;
+  }
+
+  .lizing__slogan {
+    max-width: 560px;
+    font-size: 30px;
+  }
+
+  .lizing__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .lizing__logo,
+  .lizing__logo-image {
+    width: 233px;
+    height: 87px;
+  }
+
+  .lizing__middle {
+    margin-bottom: 30px;
+  }
+
+  .lizing__bottom {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .lizing__left {
+    width: 390px;
+  }
+
+  .lizing__right {
+    width: breacpoints(large) - 390px;
+  }
+
+  .lizing__conditions-item {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+}

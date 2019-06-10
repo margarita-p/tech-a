@@ -1,0 +1,19 @@
+.logo {
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+.logo__picture,
+.logo__image {
+  display: block;
+  width: 165px;
+  height: 45px;
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(large) {
+
+}

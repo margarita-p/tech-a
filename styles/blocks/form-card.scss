@@ -1,0 +1,56 @@
+.form-card {
+  width: 100%;
+  padding: 15px;
+  padding-top: 20px;
+  background-color: color(white);
+
+  &--shadow {
+    box-shadow: 3px 3px 7px 0 rgba(#000, 0.35);
+  }
+}
+
+.form-card__heading {
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.form-card__subheading {
+  margin-top: 3px;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: color(gray);
+}
+
+@include respond-to(medium) {
+  .form-card {
+    padding: 20px;
+  }
+
+  .form-card__heading {
+    margin-bottom: 16px;
+    font-size: 17px;
+  }
+
+  .form-card__subheading {
+    font-size: 15px;
+  }
+}
+
+@include respond-to(large) {
+  .form-card {
+    padding: 30px;
+  }
+
+  .form-card__heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .form-card__subheading {
+    font-size: 16px;
+  }
+}
